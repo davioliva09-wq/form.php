@@ -96,32 +96,39 @@
         </div>
 
         <div class="história">
-            <h2>História do Clarinete</h2>
+    <h2>História do Clarinete</h2>
 
-            <p>
-                O clarinete é um instrumento de sopro pertencente à família das madeiras. 
-                Ele surgiu no final do século XVII, na Alemanha, a partir de um instrumento 
-                mais antigo chamado chalumeau.
-            </p>
+    <p>
+        O clarinete é um instrumento de sopro pertencente à família das madeiras. 
+        Ele surgiu no final do século XVII, na Alemanha, a partir de um instrumento 
+        mais antigo chamado chalumeau.
+    </p>
 
-            <p>
-                O aperfeiçoamento do clarinete é atribuído ao construtor Johann Christoph Denner, 
-                que adicionou uma chave ao chalumeau, ampliando sua extensão sonora e permitindo 
-                novas possibilidades musicais.
-            </p>
+    <p>
+        O aperfeiçoamento do clarinete é atribuído ao construtor Johann Christoph Denner, 
+        que adicionou uma chave ao chalumeau, ampliando sua extensão sonora e permitindo 
+        novas possibilidades musicais.
+    </p>
 
-            <p>
-                Durante o período clássico, compositores como Wolfgang Amadeus Mozart 
-                deram grande destaque ao instrumento, escrevendo obras importantes que 
-                exploravam sua sonoridade suave e expressiva.
-            </p>
+    <p>
+        Durante o período clássico, compositores como Wolfgang Amadeus Mozart 
+        deram grande destaque ao instrumento, escrevendo obras importantes que 
+        exploravam sua sonoridade suave e expressiva.
+    </p>
 
-            <p>
-                Ao longo dos séculos XIX e XX, o clarinete passou por diversas melhorias 
-                técnicas, tornando-se mais versátil e preciso. Hoje, é amplamente utilizado 
-                em orquestras, bandas, música de câmara, jazz e música popular.
-            </p>
-        </div>
+    <p>
+        Além do clarinete tradicional, existe também o clarone (ou clarinete baixo), 
+        que possui corpo maior e produz sons mais graves e profundos. Ele é muito 
+        utilizado em bandas sinfônicas, orquestras e conjuntos de música contemporânea, 
+        enriquecendo a harmonia com sua sonoridade encorpada.
+    </p>
+
+    <p>
+        Ao longo dos séculos XIX e XX, o clarinete e o clarone passaram por diversas melhorias 
+        técnicas, tornando-se mais versáteis e precisos. Hoje, são amplamente utilizados 
+        em orquestras, bandas, música de câmara, jazz e música popular.
+    </p>
+</div>
     </div>
 
     <div style="display: flex; flex-direction: column; font-size:40px; justify-content: center; align-items: center; border-radius: 20px; height: 100vh; margin: 30vh; background-color: rgb(187, 187, 249);">
