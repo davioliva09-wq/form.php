@@ -135,7 +135,6 @@
             }
         }
 
-        /* BOTÃO SEM BRILHO */
 .btn-custom {
     background-color: rgb(187, 187, 249);
     color: #000;

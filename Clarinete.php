@@ -79,6 +79,30 @@
             text-align: justify;
             line-height: 1.6;
         }
+
+        .btn-custom {
+    background-color: rgb(187, 187, 249);
+    color: #000;
+    border: 2px solid #000;
+    padding: 15px 40px;
+    font-size: 24px;
+    font-family: 'Fascinate', cursive;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 30px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #000;
+    color: rgb(187, 187, 249);
+    border-color: rgb(187, 187, 249);
+}
+
+.btn-custom:active {
+    transform: scale(0.95);
+}
     </style>
 </head>
 
@@ -145,6 +169,8 @@
             allowfullscreen>
         </iframe>
     </div>
+
+    <button class="btn-custom">inscrição</button>
 
 
     <?php include 'footer.php'?>
