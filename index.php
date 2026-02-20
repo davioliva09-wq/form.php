@@ -87,7 +87,7 @@ select{
 
 
 
-<h1>inscrição da música &#9835;</h1>
+<h1 style="color:#000;">inscrição da música &#9835;</h1>
 
 <div class="card-form"> 
     <input type="text" name="nome" placeholder="Seu nome" required>
