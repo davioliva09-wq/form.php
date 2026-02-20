@@ -79,7 +79,7 @@
             line-height: 1.6;
         }
 
-        footer ul {
+       /* footer ul {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -107,7 +107,7 @@
 
         footer i:hover {
             color: #ffffff;
-        }
+        }*/
     </style>
 </head>
 
@@ -179,21 +179,7 @@
         </iframe>
     </div>
 
-    <footer style="background-color: rgb(187, 187, 249); padding: 40px 0; margin-top: 80px;">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; color: #000;">
-            <p style="font-family: 'Story Script', sans-serif; font-size: 28px; margin: 0;">
-                © 2026 Nome da Empresa. Todos os direitos reservados.
-            </p>
-
-            <ul>
-                <li><a href="#">Política de Privacidade</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-
-            <a href="https://www.instagram.com/secundario_oliv4" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-</a>        </div>
-    </footer>
-
+   
 </body>
+<? include 'footer.php'?>
 </html>
