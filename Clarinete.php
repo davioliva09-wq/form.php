@@ -46,19 +46,27 @@
             justify-content: center;
             align-items: center;
             margin: 40px 0;
+            transition: transform 1.5s ease;
+
         }
 
         .imagem-central img {
-            border-radius: 20px;
-            max-width: 100%;
-            height: auto;
-        }
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+        .imagem-central img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
 
         .história {
             color: #000;
             background-color: rgb(187, 187, 249);
             padding: 20px;
             margin-bottom: 40px;
+            margin-top: 60px;
         }
 
         .história h2 {
@@ -171,7 +179,7 @@
                 <li><a href="#">Contato</a></li>
             </ul>
 
-            <a href="https://www.instagram.com/oliv4._" target="_blank">
+            <a href="https://www.instagram.com/secundario_oliv4" target="_blank">
     <i class="fa-brands fa-instagram"></i>
 </a>        </div>
     </footer>
