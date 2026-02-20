@@ -171,8 +171,9 @@
                 <li><a href="#">Contato</a></li>
             </ul>
 
-            <i class="fa-brands fa-instagram"></i>
-        </div>
+            <a href="https://www.instagram.com/oliv4._" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+</a>        </div>
     </footer>
 
 </body>
