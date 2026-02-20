@@ -83,7 +83,7 @@ select{
 <body>
 
 
-<form method="POST" action="">
+<form method="POST" action="" target="_blank">
 
 
 

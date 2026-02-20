@@ -125,31 +125,42 @@
         </div>
 
         <div class="história">
-    <h2>História do Clarinete</h2>
 
-    <p>
-        O clarinete é um instrumento de sopro pertencente à família das madeiras. 
-        Ele surgiu no final do século XVII, na Alemanha, a partir de um instrumento 
-        mais antigo chamado chalumeau.
-    </p>
+        <h1 style="#000;">A Evolução do Violino</h1>
+    
+    <p>O violino, tal como o conhecemos hoje, é um instrumento de cordas friccionadas que teve a sua origem no século XVI, na Itália. Ele evoluiu de instrumentos mais antigos e passou por séculos de aprimoramento por mestres luthieres.</p>
 
-    <p>
-        O aperfeiçoamento do clarinete é atribuído ao construtor Johann Christoph Denner, 
-        que adicionou uma chave ao chalumeau, ampliando sua extensão sonora e permitindo 
-        novas possibilidades musicais.
-    </p>
+    <h2>1. Origens e Antecessores (Antes do Séc. XVI)</h2>
+    <p>Antes do violino moderno, diversos instrumentos de corda influenciaram a sua criação, incluindo:</p>
+    <ul>
+        <li><strong>Ravanastron:</strong> Instrumento ancestral asiático/africano de uma corda.</li>
+        <li><strong>Rebab:</strong> Instrumento árabe que sucedeu o ravanastron.</li>
+        <li><strong>Lira Bizantina:</strong> Instrumento medieval em forma de pera.</li>
+        <li><strong>Rabeca:</strong> Um dos antecessores mais diretos, com formato similar ao violino.</li>
+        <li><strong>Lira da Braccio:</strong> Utilizada no Renascimento italiano, já apresentava características próximas ao violino moderno.</li>
+    </ul>
 
-    <p>
-        Durante o período clássico, compositores como Wolfgang Amadeus Mozart 
-        deram grande destaque ao instrumento, escrevendo obras importantes que 
-        exploravam sua sonoridade suave e expressiva.
-    </p>
+    <h2>2. O Surgimento na Itália (Século XVI)</h2>
+    <p>O violino moderno foi desenvolvido no início do século XVI, provavelmente por luthiers de Cremona, Itália. Andrea Amati é frequentemente apontado como um dos criadores do primeiro violino por volta de 1555. Inicialmente, o termo "violino" era menos comum que "rabeca".</p>
 
-    <p>
-        Ao longo dos séculos XIX e XX, o clarinete passou por diversas melhorias 
-        técnicas, tornando-se mais versátil e preciso. Hoje, é amplamente utilizado 
-        em orquestras, bandas, música de câmara, jazz e música popular.
-    </p>
+    <h2>3. A Era de Ouro: Cremona (Séculos XVII - XVIII)</h2>
+    <p>Cremona tornou-se o centro da fabricação de violinos, onde famílias renomadas aprimoraram o instrumento:</p>
+    <ul>
+        <li><strong>Família Amati:</strong> Estabeleceu o formato inicial do violino barroco.</li>
+        <li><strong>Antonio Stradivari (Stradivarius):</strong> Considerado um dos maiores mestres, aperfeiçoou o som e a forma do violino entre 1700-1724.</li>
+        <li><strong>Guarneri del Gesú:</strong> Outro mestre luthier cujos instrumentos são reverenciados pela sonoridade única.</li>
+    </ul>
+
+    <h2>4. Diferenças: Violino Barroco vs. Moderno</h2>
+    <p>Ao longo do século XVIII e XIX, o violino sofreu modificações para atender às demandas de orquestras maiores:</p>
+    <ul>
+        <li><strong>Violino Antigo (Barroco):</strong> Possuía cordas de tripa, arco convexo, braço mais grosso e reto.</li>
+        <li><strong>Violino Moderno:</strong> Inclui um braço inclinado para trás, cordas de maior tensão e um espelho mais longo para agudos mais altos.</li>
+    </ul>
+
+    <h2>5. O Violino na Atualidade</h2>
+    <p>O violino hoje é um instrumento indispensável na música clássica e popular, famoso pela sua capacidade de expressar emoções intensas, assemelhando-se à voz humana. Mestres como Niccolò Paganini (séculos XVIII/XIX) ajudaram a popularizar o virtuosismo no instrumento.</p>
+
 </div>
     </div>
 
