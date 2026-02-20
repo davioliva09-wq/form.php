@@ -57,7 +57,7 @@
     transition: transform 0.4s ease;
 }
         .imagem-central img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -121,7 +121,7 @@
         <h1>Clarinete &#9835;</h1>
 
         <div class="imagem-central">
-            <img src="imgmus/clarinete.jpg" alt="Clarinete">
+            <img src="imgmus/Violin.jpg" alt="Violino">
         </div>
 
         <div class="história">
