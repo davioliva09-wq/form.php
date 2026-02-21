@@ -17,69 +17,78 @@
             font-size: 17px;
             color: #fff;
             background-color: #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
+        /* CABEÇALHO - IGUAL AO DO VIOLINO */
         .topo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background-color: rgb(187, 187, 249);
-    backdrop-filter: blur(8px);
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    z-index: 1000;
-}
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgb(187, 187, 249);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
+        .logo .nota {
+            font-size: 32px;
+            color: #000;
+        }
 
+        .logo h2 {
+            font-family: 'Fascinate', cursive;
+            margin: 0;
+            color: #000;
+            font-size: 24px;
+        }
 
-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+        nav {
+            display: flex;
+            gap: 30px;
+        }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
 
-.logo h2 {
-    color: white;
-    font-family: 'Fascinate', system-ui;
-    margin: 0;
-}
+        nav a:hover {
+            background-color: #000;
+            color: rgb(187, 187, 249);
+        }
 
-.nota {
-    color: #ff4da6;
-    font-size: 24px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ff4da6;
-}
+        /* ESPAÇO PARA O CONTEÚDO NÃO FICAR ATRÁS DO CABEÇALHO */
+        .content {
+            margin: 0 33px;
+            flex: 1;
+            padding-top: 100px;
+        }
 
         h1 {
             font-family: 'Fascinate', system-ui;
             text-align: center;
             color: rgb(187, 187, 249);
             margin-top: 20px;
-        }
-
-        .content {
-            margin: 0 33px;
+            margin-bottom: 30px;
         }
 
         .imagem-central {
@@ -87,8 +96,6 @@ nav a:hover {
             justify-content: center;
             align-items: center;
             margin: 40px 0;
-            transition: transform 1.5s ease;
-
         }
 
         .imagem-central img {
@@ -109,58 +116,136 @@ nav a:hover {
             padding: 20px;
             margin-bottom: 40px;
             margin-top: 60px;
+            border-radius: 10px;
         }
 
         .história h2 {
             text-align: center;
             margin-top: 0;
+            color: #000;
+            font-size: 28px;
+        }
+
+        .história h3 {
+            color: #000;
+            margin-top: 25px;
+            margin-bottom: 10px;
         }
 
         .história p {
             text-align: justify;
             line-height: 1.6;
+            color: #000;
+        }
+        
+        .história ul {
+            color: #000;
+        }
+        
+        .história li {
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            height: auto;
+            margin: 30px 0 50px 0;
+            padding: 40px 20px;
+            background-color: rgb(187, 187, 249);
+        }
+
+        .video-section p {
+            font-family: 'Story Script', sans-serif;
+            color: #000;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .video-section iframe {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .btn-custom {
-    background-color: rgb(187, 187, 249);
-    color: #000;
-    border: 2px solid #000;
-    padding: 15px 40px;
-    font-size: 24px;
-    font-family: 'Fascinate', cursive;
-    border-radius: 50px;
-    cursor: pointer;
-    margin: 30px auto;
-    display: block;
-    transition: all 0.3s ease;
-}
+            background-color: rgb(187, 187, 249);
+            color: #000;
+            border: 2px solid #000;
+            padding: 15px 40px;
+            font-size: 24px;
+            font-family: 'Fascinate', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
 
-.btn-custom:hover {
-    background-color: #000;
-    color: rgb(187, 187, 249);
-    border-color: rgb(187, 187, 249);
-}
+        .btn-custom:hover {
+            background-color: #000;
+            color: rgb(187, 187, 249);
+            border-color: rgb(187, 187, 249);
+        }
 
-.btn-custom:active {
-    transform: scale(0.95);
-}
+        .btn-custom:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            .video-section iframe {
+                height: 300px;
+            }
+            
+            .video-section p {
+                font-size: 24px;
+            }
+            
+            .content {
+                margin: 0 15px;
+                padding-top: 90px;
+            }
+
+            .topo {
+                padding: 0 20px;
+                height: 70px;
+            }
+
+            .logo h2 {
+                font-size: 18px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<header class="topo">
-    <div class="logo">
-        <span class="nota">&#9835;</span>
-        <h2>Festival Musical</h2>
-    </div>
+    <header class="topo">
+        <div class="logo">
+            <span class="nota">&#9835;</span>
+            <h2>Festival Musical</h2>
+        </div>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Instrumentos</a>
-        <a href="#">Sobre</a>
-    </nav>
-</header>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Instrumentos</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
 
     <div class="content">
         <h1>Clarinete &#9835;</h1>
@@ -170,60 +255,38 @@ nav a:hover {
         </div>
 
         <div class="história">
-    <h2>História do Clarinete</h2>
+            <h2>História do Clarinete</h2>
 
-    <p>
-        O clarinete é um instrumento de sopro pertencente à família das madeiras. 
-        Ele surgiu no final do século XVII, na Alemanha, a partir de um instrumento 
-        mais antigo chamado chalumeau.
-    </p>
+            <p>O clarinete é um instrumento de sopro pertencente à família das madeiras. Ele surgiu no final do século XVII, na Alemanha, a partir de um instrumento mais antigo chamado chalumeau.</p>
 
-    <p>
-        O aperfeiçoamento do clarinete é atribuído ao construtor Johann Christoph Denner, 
-        que adicionou uma chave ao chalumeau, ampliando sua extensão sonora e permitindo 
-        novas possibilidades musicais.
-    </p>
+            <h3>1. O Invenção e Evolução</h3>
+            <p>O aperfeiçoamento do clarinete é atribuído ao construtor Johann Christoph Denner, que adicionou uma chave ao chalumeau, ampliando sua extensão sonora e permitindo novas possibilidades musicais.</p>
 
-    <p>
-        Durante o período clássico, compositores como Wolfgang Amadeus Mozart 
-        deram grande destaque ao instrumento, escrevendo obras importantes que 
-        exploravam sua sonoridade suave e expressiva.
-    </p>
+            <h3>2. Período Clássico</h3>
+            <p>Durante o período clássico, compositores como Wolfgang Amadeus Mozart deram grande destaque ao instrumento, escrevendo obras importantes que exploravam sua sonoridade suave e expressiva.</p>
 
-    <p>
-        Além do clarinete tradicional, existe também o clarone (ou clarinete baixo), 
-        que possui corpo maior e produz sons mais graves e profundos. Ele é muito 
-        utilizado em bandas sinfônicas, orquestras e conjuntos de música contemporânea, 
-        enriquecendo a harmonia com sua sonoridade encorpada.
-    </p>
+            <h3>3. Família do Clarinete</h3>
+            <p>Além do clarinete tradicional, existe também o clarone (ou clarinete baixo), que possui corpo maior e produz sons mais graves e profundos. Ele é muito utilizado em bandas sinfônicas, orquestras e conjuntos de música contemporânea, enriquecendo a harmonia com sua sonoridade encorpada.</p>
 
-    <p>
-        Ao longo dos séculos XIX e XX, o clarinete e o clarone passaram por diversas melhorias 
-        técnicas, tornando-se mais versáteis e precisos. Hoje, são amplamente utilizados 
-        em orquestras, bandas, música de câmara, jazz e música popular.
-    </p>
-</div>
+            <h3>4. Expansão e Modernidade</h3>
+            <p>Ao longo dos séculos XIX e XX, o clarinete e o clarone passaram por diversas melhorias técnicas, tornando-se mais versáteis e precisos. Hoje, são amplamente utilizados em orquestras, bandas, música de câmara, jazz e música popular.</p>
+        </div>
+
+        <div class="video-section">
+            <p>Conheça o som do clarinete</p>
+
+            <iframe src="https://www.youtube.com/embed/IL1tulGRUVM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
-    <div style="display: flex; flex-direction: column; font-size:40px; justify-content: center; align-items: center; border-radius: 20px; height: 100vh; margin: 30vh; background-color: rgb(187, 187, 249);">
-        <p style="font-family: 'Story Script', sans-serif; color:#000; margin-bottom:20px;">
-            Conheça o som do clarinete
-        </p>
+    <button class="btn-custom">Inscrição</button>
 
-        <iframe width="900" height="500"
-            style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);"
-            src="https://www.youtube.com/embed/IL1tulGRUVM"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
+    <?php include 'footer.php'; ?>
 
-    <button class="btn-custom">inscrição</button>
-
-
-    <?php include 'footer.php'?>
-    
 </body>
 </html>

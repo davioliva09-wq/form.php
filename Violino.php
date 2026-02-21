@@ -22,15 +22,52 @@
             flex-direction: column;
         }
 
-        .full-header {
-            background-color: rgb(187, 187, 249);
-            height: 80px;
-            text-align: center;
-            line-height: 80px;
-            width: 100%;
-            font-family: 'Fascinate', system-ui;
-            font-size: 24px;
+        /* CABEÇALHO CORRIGIDO */
+        
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo .nota {
+            font-size: 32px;
             color: #000;
+        }
+
+        .logo h2 {
+            font-family: 'Fascinate', cursive;
+            margin: 0;
+            color: #000;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #000;
+            color: rgb(187, 187, 249);
+        }
+
+        /* DÁ ESPAÇO PARA O CONTEÚDO NÃO FICAR ATRÁS DO CABEÇALHO FIXO */
+        .content {
+            margin: 0 33px;
+            flex: 1;
+            padding-top: 100px; /* IMPORTANTE: empurra o conteúdo para baixo */
         }
 
         h1 {
@@ -38,11 +75,6 @@
             text-align: center;
             color: rgb(187, 187, 249);
             margin-top: 20px;
-        }
-
-        .content {
-            margin: 0 33px;
-            flex: 1;
         }
 
         .imagem-central {
@@ -121,6 +153,30 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
+        .btn-custom {
+            background-color: rgb(187, 187, 249);
+            color: #000;
+            border: 2px solid #000;
+            padding: 15px 40px;
+            font-size: 24px;
+            font-family: 'Fascinate', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #000;
+            color: rgb(187, 187, 249);
+            border-color: rgb(187, 187, 249);
+        }
+
+        .btn-custom:active {
+            transform: scale(0.95);
+        }
+
         @media (max-width: 768px) {
             .video-section iframe {
                 height: 300px;
@@ -132,65 +188,36 @@
             
             .content {
                 margin: 0 15px;
+                padding-top: 90px;
+            }
+
+          
+
+            .logo h2 {
+                font-size: 18px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 14px;
             }
         }
-
-.btn-custom {
-    background-color: rgb(187, 187, 249);
-    color: #000;
-    border: 2px solid #000;
-    padding: 15px 40px;
-    font-size: 24px;
-    font-family: 'Fascinate', cursive;
-    border-radius: 50px;
-    cursor: pointer;
-    margin: 30px auto;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.btn-custom:hover {
-    background-color: #000;
-    color: rgb(187, 187, 249);
-    border-color: rgb(187, 187, 249);
-}
-
-.btn-custom:active {
-    transform: scale(0.95);
-}
-
-
-
-.topo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background-color: rgb(187, 187, 249);
-    backdrop-filter: blur(8px);
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    z-index: 1000;
-}
     </style>
 </head>
 
 <body>
 
-    <header class="topo">
-    <div class="logo">
-        <span class="nota">&#9835;</span>
-        <h2>Festival Musical</h2>
-    </div>
+    <?php include 'header.php';?>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Instrumentos</a>
-        <a href="#">Sobre</a>
-    </nav>
-</header>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Instrumentos</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
 
     <div class="content">
         <h1>Violino &#9835;</h1>
@@ -237,22 +264,19 @@
         </div>
 
         <div class="video-section">
-            <p>Conheça o som do violino</p>
-
-            <iframe src="https://www.youtube.com/embed/IL1tulGRUVM"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-        </div>
+    <p>Conheça o som do violino</p>
+    
+    <iframe width="900" height="500" 
+            src="https://www.youtube.com/embed/IL1tulGRUVM" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+    </iframe>
+</div>
     </div>
 
-
-
-    <button class="btn-custom">inscrição</button>
-
-
+    <button class="btn-custom">Inscrição</button>
 
     <?php include 'footer.php'; ?>
 
