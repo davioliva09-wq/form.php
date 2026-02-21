@@ -58,7 +58,7 @@
         }
         
         .imagem-central img:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
             cursor: pointer;
         }
 

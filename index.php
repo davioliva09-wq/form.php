@@ -1,205 +1,179 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarinete</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Story+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <title>formulario</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            color: #fff;
+            background-color: #000;
+        }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(90deg, black, gray);
-    display: flex;
-    justify-content: center; 
-    align-items: center;        
+        .full-header {
+            background-color: rgb(187, 187, 249);
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            width: 100%;
+            font-family: 'Fascinate', system-ui;
+            font-size: 24px;
+            color: #000;
+        }
+
+        h1 {
+            font-family: 'Fascinate', system-ui;
+            text-align: center;
+            color: rgb(187, 187, 249);
+            margin-top: 20px;
+        }
+
+        .content {
+            margin: 0 33px;
+        }
+
+        .imagem-central {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            transition: transform 1.5s ease;
+
+        }
+
+        .imagem-central img {
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.4s ease;
+        }
+        
+        .imagem-central img:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .história {
+            color: #000;
+            background-color: rgb(187, 187, 249);
+            padding: 20px;
+            margin-bottom: 40px;
+            margin-top: 60px;
+        }
+
+        .história h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .história p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .btn-custom {
+    background-color: rgb(187, 187, 249);
+    color: #000;
+    border: 2px solid #000;
+    padding: 15px 40px;
+    font-size: 24px;
+    font-family: 'Fascinate', cursive;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 30px auto;
+    display: block;
+    transition: all 0.3s ease;
 }
 
-h1 {
-    font-family: 'Fascinate', system-ui;
-    text-align: center;
-    color:rgba(71, 17, 17, 0.69);
-    box-shadow: pink;
+.btn-custom:hover {
+    background-color: #000;
+    color: rgb(187, 187, 249);
+    border-color: rgb(187, 187, 249);
 }
 
-
-
-.card-form{
-    background-color:rgba(246, 246, 246, 0.09);
-    width: 500px;
-    height: 500px;
-    border-radius:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.btn-custom:active {
+    transform: scale(0.95);
 }
-
-.card-form input{
-    margin: 10px 0;
-    padding: 8px;
-    border-radius: 10px;;
-    width: 80%;
-}
-
-
-button{
-    border-radius:5px;
-    transition: 0.5s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width:100px;
-
-
-}
-
-button:hover{
-
-    background-color:#808080;
-    transform: scale(1.1);
-    cursor:pointer;
-
-}
-
-select{
-
-    margin: 10px 0;
-    padding: 8px;
-    border-radius: 10px;;
-    width: 80%;
-
-
-
-}
-
     </style>
 </head>
+
 <body>
 
+    <header class="full-header">
+        Meu Header
+    </header>
 
-<form method="POST" action="" target="_blank">
+    <div class="content">
+        <h1>Clarinete &#9835;</h1>
 
+        <div class="imagem-central">
+            <img src="imgmus/clarinete.jpg" alt="Clarinete">
+        </div>
 
+        <div class="história">
+    <h2>História do Clarinete</h2>
 
-<h1 style="color:#000;">inscrição da música &#9835;</h1>
+    <p>
+        O clarinete é um instrumento de sopro pertencente à família das madeiras. 
+        Ele surgiu no final do século XVII, na Alemanha, a partir de um instrumento 
+        mais antigo chamado chalumeau.
+    </p>
 
-<div class="card-form"> 
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <br>
-    <input type="email" name="email" placeholder="Seu email" required> 
-    <br>
+    <p>
+        O aperfeiçoamento do clarinete é atribuído ao construtor Johann Christoph Denner, 
+        que adicionou uma chave ao chalumeau, ampliando sua extensão sonora e permitindo 
+        novas possibilidades musicais.
+    </p>
 
-    <select name="instrumento" required >
-        <option value="Escolher">Escolher</option>
-        <option value="Clarinete">Clarinete</option>
-        <option value="Violino">Violino</option>
-        <option value="Flauta">Flauta</option>
-        <option value="Saxofone">Saxofone</option>
-        <option value="Tuba">Tuba</option>
-        
+    <p>
+        Durante o período clássico, compositores como Wolfgang Amadeus Mozart 
+        deram grande destaque ao instrumento, escrevendo obras importantes que 
+        exploravam sua sonoridade suave e expressiva.
+    </p>
 
+    <p>
+        Além do clarinete tradicional, existe também o clarone (ou clarinete baixo), 
+        que possui corpo maior e produz sons mais graves e profundos. Ele é muito 
+        utilizado em bandas sinfônicas, orquestras e conjuntos de música contemporânea, 
+        enriquecendo a harmonia com sua sonoridade encorpada.
+    </p>
 
-    </select>
-    <button type="submit" name="enviar">Enviar</button>
-</form>
+    <p>
+        Ao longo dos séculos XIX e XX, o clarinete e o clarone passaram por diversas melhorias 
+        técnicas, tornando-se mais versáteis e precisos. Hoje, são amplamente utilizados 
+        em orquestras, bandas, música de câmara, jazz e música popular.
+    </p>
 </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; font-size:40px; justify-content: center; align-items: center; border-radius: 20px; height: 100vh; margin: 30vh; background-color: rgb(187, 187, 249);">
+        <p style="font-family: 'Story Script', sans-serif; color:#000; margin-bottom:20px;">
+            Conheça o som do clarinete
+        </p>
+
+        <iframe width="900" height="500"
+            style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);"
+            src="https://www.youtube.com/embed/IL1tulGRUVM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <button class="btn-custom">inscrição</button>
+
+
+    <?php include 'footer.php'?>
     
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-
-$erros = [];
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    $nome = trim($_POST['nome'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $instrumento = $_POST['instrumento'] ?? '';
-
-    if(empty($nome)){
-        $erros[] = 'Nome é obrigatório';
-    }
-
-    if(empty($email)){
-        $erros[] = 'Email é obrigatório';
-    } 
-    elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $erros[] = 'Email inválido';
-    }
-
-    if(empty($erros)){
-
-        if($instrumento == "Clarinete"){
-            header('Location: Clarinete.php');
-            exit;
-        }
-
-        if($instrumento == "Violino"){
-            header('Location: Violino.php');
-            exit;
-        }
-
-        if($instrumento == "Flauta"){
-            header('Location: Flauta.php');
-            exit;
-        }
-
-        if($instrumento == "Saxofone"){
-            header('Location: Saxofone.php');
-            exit;
-        }
-
-        if($instrumento == "Tuba"){
-            header('Location: Tuba.php');
-            exit;
-        }
-        if($instrumento =="Escolher"){
-
-            return 'escolha o instrumento';
-        }
-
-    } else {
-
-        foreach ($erros as $erro) {
-            echo "<p style='color:red'>$erro</p>";
-        }
-
-    }
-
-}
-?>
