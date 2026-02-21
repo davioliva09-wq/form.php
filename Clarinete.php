@@ -19,16 +19,57 @@
             background-color: #000;
         }
 
-        .full-header {
-            background-color: rgb(187, 187, 249);
-            height: 80px;
-            text-align: center;
-            line-height: 80px;
-            width: 100%;
-            font-family: 'Fascinate', system-ui;
-            font-size: 24px;
-            color: #000;
-        }
+        .topo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(187, 187, 249);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+
+
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h2 {
+    color: white;
+    font-family: 'Fascinate', system-ui;
+    margin: 0;
+}
+
+.nota {
+    color: #ff4da6;
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff4da6;
+}
 
         h1 {
             font-family: 'Fascinate', system-ui;
@@ -108,9 +149,18 @@
 
 <body>
 
-    <header class="full-header">
-        Meu Header
-    </header>
+<header class="topo">
+    <div class="logo">
+        <span class="nota">&#9835;</span>
+        <h2>Festival Musical</h2>
+    </div>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Instrumentos</a>
+        <a href="#">Sobre</a>
+    </nav>
+</header>
 
     <div class="content">
         <h1>Clarinete &#9835;</h1>
