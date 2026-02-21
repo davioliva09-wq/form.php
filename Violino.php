@@ -158,14 +158,39 @@
 .btn-custom:active {
     transform: scale(0.95);
 }
+
+
+
+.topo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(187, 187, 249);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
     </style>
 </head>
 
 <body>
 
-    <header class="full-header">
-        Meu Header
-    </header>
+    <header class="topo">
+    <div class="logo">
+        <span class="nota">&#9835;</span>
+        <h2>Festival Musical</h2>
+    </div>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Instrumentos</a>
+        <a href="#">Sobre</a>
+    </nav>
+</header>
 
     <div class="content">
         <h1>Violino &#9835;</h1>
