@@ -180,7 +180,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
         if($instrumento == "Saxofone"){
-            header('Location: Saxofone.php');
+            header('Location: Sax.php');
             exit;
         }
 

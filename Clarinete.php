@@ -234,18 +234,7 @@
 
 <body>
 
-    <header class="topo">
-        <div class="logo">
-            <span class="nota">&#9835;</span>
-            <h2>Festival Musical</h2>
-        </div>
-
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Instrumentos</a>
-            <a href="#">Sobre</a>
-        </nav>
-    </header>
+<?php include 'header.php'?>
 
     <div class="content">
         <h1>Clarinete &#9835;</h1>
