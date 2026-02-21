@@ -266,13 +266,7 @@
         <div class="video-section">
     <p>Conheça o som do violino</p>
     
-    <iframe width="900" height="500" 
-            src="https://www.youtube.com/embed/IL1tulGRUVM" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-    </iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T7k2pmKUXxI?si=sT1YRiMKonCa9WSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
     </div>
 

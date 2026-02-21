@@ -83,11 +83,11 @@ select{
 <body>
 
 
-<form method="POST" action="">
+<form method="POST" action="" target="blank">
 
 
 
-<h1>inscrição da música &#9835;</h1>
+<h1>Music's &#9835;</h1>
 
 <div class="card-form"> 
     <input type="text" name="nome" placeholder="Seu nome" required>
