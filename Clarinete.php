@@ -390,15 +390,8 @@
         <button class="btn-custom" onclick="matricula()">Inscrição</button>
     </div>
 
-    <?php include 'footer.php'; ?>
-<script>
-    function matricula(){
-
-        window.location.href= "Sax.php";
-
-
-
-    }
+    <?php include 'footer.php' ?>
+    <?php include 'botao.php'?>
 
 
 
@@ -408,6 +401,6 @@
 
 
 
-</script>
+
 </body>
 </html>

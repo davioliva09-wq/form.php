@@ -16,8 +16,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     height: 100vh;
-    background: linear-gradient(90deg, black, gray);
-    display: flex;
+    background: linear-gradient(90deg, black, rgb(187, 187, 249));    display: flex;
     justify-content: center; 
     align-items: center;        
 }

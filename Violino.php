@@ -22,8 +22,20 @@
             flex-direction: column;
         }
 
-        /* CABEÇALHO CORRIGIDO */
-        
+        .topo {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgb(187, 187, 249);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
 
         .logo {
             display: flex;
@@ -63,11 +75,10 @@
             color: rgb(187, 187, 249);
         }
 
-        /* DÁ ESPAÇO PARA O CONTEÚDO NÃO FICAR ATRÁS DO CABEÇALHO FIXO */
         .content {
             margin: 0 33px;
             flex: 1;
-            padding-top: 100px; /* IMPORTANTE: empurra o conteúdo para baixo */
+            padding-top: 100px; 
         }
 
         h1 {
@@ -191,7 +202,10 @@
                 padding-top: 90px;
             }
 
-          
+            .topo {
+                padding: 0 20px;
+                height: 70px;
+            }
 
             .logo h2 {
                 font-size: 18px;
@@ -210,14 +224,7 @@
 
 <body>
 
-    <?php include 'header.php';?>
-
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Instrumentos</a>
-            <a href="#">Sobre</a>
-        </nav>
-    </header>
+    <?php include 'header.php'; ?>
 
     <div class="content">
         <h1>Violino &#9835;</h1>
@@ -264,15 +271,15 @@
         </div>
 
         <div class="video-section">
-    <p>Conheça o som do violino</p>
-    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/T7k2pmKUXxI?si=sT1YRiMKonCa9WSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+            <p>Conheça o som do violino</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/T7k2pmKUXxI?si=sT1YRiMKonCa9WSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <button class="btn-custom" onclick="matricula()">Inscrição</button>
     </div>
 
-    <button class="btn-custom">Inscrição</button>
-
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.php'?>
+    <?php include 'botao.php' ?>  
 
 </body>
 </html>
