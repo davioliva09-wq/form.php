@@ -22,7 +22,6 @@
             flex-direction: column;
         }
 
-        /* CABEÇALHO - IGUAL AO DO VIOLINO */
         .topo {
             position: fixed;
             top: 0;
@@ -76,7 +75,6 @@
             color: rgb(187, 187, 249);
         }
 
-        /* ESPAÇO PARA O CONTEÚDO NÃO FICAR ATRÁS DO CABEÇALHO */
         .content {
             margin: 0 33px;
             flex: 1;
@@ -229,12 +227,89 @@
                 font-size: 14px;
             }
         }
+
+        .clarone {
+            color: #000;
+            background-color: rgb(187, 187, 249);
+            padding: 20px;
+            margin-bottom: 40px;
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+
+        .clarone h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #000;
+            font-size: 28px;
+            padding: 20px;
+        }
+
+        .clarone p {
+            color: #000;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .clarone h3 {
+            color: #000;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .imgcla {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .imgcla img {
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.4s ease;
+        }
+
+        .imgcla img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .video-clarone {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            height: auto;
+            margin: 30px 0 50px 0;
+            padding: 40px 20px;
+            margin-top:400px;
+            margin-bottom:300px;
+            background-color: rgb(187, 187, 249);
+        }
+
+        .video-clarone p {
+            font-family: 'Story Script', sans-serif;
+            color: #000;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .video-clarone iframe {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 
 <body>
 
-<?php include 'header.php'?>
+<?php include 'header.php'; ?>
 
     <div class="content">
         <h1>Clarinete &#9835;</h1>
@@ -248,7 +323,7 @@
 
             <p>O clarinete é um instrumento de sopro pertencente à família das madeiras. Ele surgiu no final do século XVII, na Alemanha, a partir de um instrumento mais antigo chamado chalumeau.</p>
 
-            <h3>1. O Invenção e Evolução</h3>
+            <h3>1. Invenção e Evolução</h3>
             <p>O aperfeiçoamento do clarinete é atribuído ao construtor Johann Christoph Denner, que adicionou uma chave ao chalumeau, ampliando sua extensão sonora e permitindo novas possibilidades musicais.</p>
 
             <h3>2. Período Clássico</h3>
@@ -261,9 +336,39 @@
             <p>Ao longo dos séculos XIX e XX, o clarinete e o clarone passaram por diversas melhorias técnicas, tornando-se mais versáteis e precisos. Hoje, são amplamente utilizados em orquestras, bandas, música de câmara, jazz e música popular.</p>
         </div>
 
+        <section class="clarone" id="clarone">
+            <h2>Clarone (Clarinete Baixo)</h2>
+
+            <p>
+                O clarone, também conhecido como clarinete baixo, é um instrumento de sopro da família das madeiras. Ele possui estrutura semelhante ao clarinete tradicional, porém com tamanho maior e sonoridade mais grave e encorpada.
+            </p>
+
+            <p>
+                Seu desenvolvimento ocorreu no século XIX, buscando ampliar a extensão sonora da família do clarinete. Com seu tubo mais longo e campana geralmente curvada, o clarone alcança notas profundas que enriquecem a base harmônica de conjuntos musicais.
+            </p>
+
+            <h3>Características Sonoras</h3>
+            <p>
+                O clarone é afinado normalmente em Si♭ e possui uma extensão ampla, capaz de produzir sons graves intensos e também regiões médias expressivas. Seu timbre é aveludado, escuro e marcante.
+            </p>
+
+            <h3>Utilização</h3>
+            <p>
+                É amplamente utilizado em bandas sinfônicas, orquestras, grupos de câmara e também na música contemporânea. No jazz, o clarone ganhou destaque por sua sonoridade diferenciada e profunda.
+            </p>
+
+            <h3>Importância Musical</h3>
+            <p>
+                Dentro da família do clarinete, o clarone cumpre um papel fundamental ao oferecer sustentação harmônica e equilíbrio sonoro, funcionando como uma ponte entre os registros médios e graves da orquestra ou banda.
+            </p>
+        </section>
+
+        <div class="imgcla">
+            <img src="imgmus/clarone.jpg" alt="Clarone">
+        </div>
+
         <div class="video-section">
             <p>Conheça o som do clarinete</p>
-
             <iframe src="https://www.youtube.com/embed/IL1tulGRUVM"
                     title="YouTube video player"
                     frameborder="0"
@@ -271,11 +376,38 @@
                     allowfullscreen>
             </iframe>
         </div>
+
+        <div class="video-clarone">
+            <p>Conheça o som do clarone</p>
+            <iframe src="https://www.youtube.com/embed/IL1tulGRUVM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <button class="btn-custom" onclick="matricula()">Inscrição</button>
     </div>
 
-    <button class="btn-custom">Inscrição</button>
-
     <?php include 'footer.php'; ?>
+<script>
+    function matricula(){
 
+        window.location.href= "Sax.php";
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+</script>
 </body>
 </html>

@@ -209,16 +209,16 @@
     <div id="carouselSax" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="imgmus/soprano.jpeg" class="d-block w-100" alt="Sax Soprano">
+                <img src="imgmus/reto.jpg" class="d-block w-100" alt="Sax Soprano">
             </div>
             <div class="carousel-item">
-                <img src="imgmus/Saxalto.jpeg" class="d-block w-100" alt="Sax Alto">
+                <img src="imgmus/alto.jpg" class="d-block w-100" alt="Sax Alto">
             </div>
             <div class="carousel-item">
-                <img src="SaxTenor.webp" class="d-block w-100" alt="Sax Tenor">
+                <img src="imgmus/Tenor.jpg" class="d-block w-100" alt="Sax Tenor">
             </div>
             <div class="carousel-item">
-                <img src="imgmus/SaxBar.jpeg" class="d-block w-100" alt="Sax Barítono">
+                <img src="imgmus/bari.jpg" class="d-block w-100" alt="Sax Barítono">
             </div>
         </div>
 
@@ -231,9 +231,23 @@
     </div>
 
     <div class="história">
-        <h2>História do Saxofone</h2>
-        <p>Inventado por Adolphe Sax em 1846, o saxofone combina potência e expressividade. Apesar de ser feito de metal, pertence à família das madeiras por utilizar palheta simples.</p>
+        <h2 style="font-family:'Fascinate', cursive;
+">História do Saxofone</h2>
+        <p>
+O saxofone foi inventado em 1846 pelo belga Adolphe Sax, com o objetivo de criar um instrumento que unisse a potência sonora dos metais com a agilidade e flexibilidade das madeiras. Apesar de ser construído em metal, ele pertence à família das madeiras por utilizar palheta simples, semelhante à do clarinete.
+</p>
 
+<p>
+Inicialmente, o saxofone foi desenvolvido para bandas militares, pois seu som projetava melhor ao ar livre e preenchia espaços que outros instrumentos não alcançavam com tanta clareza. Rapidamente, ele despertou o interesse de compositores eruditos, que passaram a escrever obras específicas para o instrumento.
+</p>
+
+<p>
+No século XX, o saxofone ganhou enorme destaque com o surgimento do jazz nos Estados Unidos. Tornou-se símbolo de improvisação, expressão individual e liberdade musical. Grandes músicos ajudaram a consolidar o instrumento como um dos mais marcantes da música moderna.
+</p>
+
+<p>
+Atualmente, o saxofone é amplamente utilizado em diversos estilos musicais, como jazz, música popular, gospel, rock e música erudita, sendo reconhecido mundialmente por sua versatilidade e capacidade expressiva.
+</p>    
         <h3>Família do Saxofone</h3>
         <ul>
             <li><strong>Soprano:</strong> agudo e brilhante.</li>
@@ -245,15 +259,17 @@
 
     <div class="video-section">
         <p>Conheça o som do saxofone</p>
-        <iframe src="https://youtu.be/XLH47I9b0a0?si=K0msVP7cLsXFk7MT" allowfullscreen></iframe>
-    </div>
+        <iframe width="560" height="315" src="https://youtu.be/XBWyE1v8--I?si=5ufFKvKe6muQqqR6" 
+title="Careless Whisper Sax" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+   </div>
 </div>
 
 <button class="btn-custom">Inscrição</button>
 
 <?php include 'footer.php'; ?>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
