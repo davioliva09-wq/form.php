@@ -1,7 +1,23 @@
 <script>
     function matricula(){
 
-        window.location.href= "Sax.php" ;
+        window.location.href= "conta.php" ;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    function voltar(){
+
+
+    window.location.href="index.php";
 
 
 

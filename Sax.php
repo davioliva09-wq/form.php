@@ -266,10 +266,10 @@ allowfullscreen></iframe>
    </div>
 </div>
 
-<button class="btn-custom">Inscrição</button>
+<button class="btn-custom" onclick="matricula()">Inscrição</button>
 
-<?php include 'footer.php'; ?>
-
+<?php include 'footer.php';?> 
+<?php include 'botao.php';?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

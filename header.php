@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-    
+    <?php include 'botao.php';?>
     <style>
         .topo {
-            position: fixed;
-            top: 0;
+           /* position: fixed;
+            top: 0;*/
             width: 100%;
             height: 80px;
             background-color: rgb(187, 187, 249);
@@ -30,6 +30,7 @@
             align-items: center;
             gap: 10px;
             flex-wrap: wrap; 
+            cursor: pointer;
         }
 
         .nota {
@@ -99,7 +100,7 @@
     <header class="topo">
         <div class="logo">
             <span class="nota">&#9835;</span>
-            <span class="site-name">Music's</span>
+            <span class="site-name" onclick="voltar()">Music's</span>
             <span class="frase">"Tocar uma nota errada é insignificante. Tocar sem paixão é imperdoável"</span>
         </div>
         <nav>

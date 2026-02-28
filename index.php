@@ -1,204 +1,461 @@
+<?php
+?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music's</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Story+Script&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <title>formulario</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(90deg, black, rgb(187, 187, 249));    display: flex;
-    justify-content: center; 
-    align-items: center;        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, rgb(187, 187, 249) 0%,rgb(0, 0, 0) 50%,rgb(187, 187, 249) 100%);
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-family: 'Fascinate', cursive;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .text {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 40px;
+            margin-top: 20px;
+        }
+
+        select {
+            appearance: none;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 15px 40px 15px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            outline: none;
+            min-width: 250px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+        }
+
+        select option {
+            background: #16213e;
+            color: #fff;
+            padding: 10px;
+        }
+
+        select:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .hero-section h2 {
+            font-family: 'Story Script', cursive;
+            font-size: 3.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .area-music {
+            width: 800px;
+            max-width: 90%;
+            height: 400px;
+            margin: 30px 0 50px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .area-music:hover {
+            transform: scale(1.02);
+        }
+
+        .area-music img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            gap:20px;
+        }
+
+        .area-music:hover img {
+            transform: scale(1.1);
+        }
+
+        .music-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .area-music:hover .music-overlay {
+            transform: translateY(0);
+        }
+
+        .music-overlay h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .music-overlay p {
+            opacity: 0.9;
+        }
+
+        .features {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            width: 250px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .feature-card i {
+            font-size: 3em;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9em;
+        }
+
+        .footer {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 30px 40px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #4ecdc4;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-section h2 {
+                font-size: 2.5em;
+            }
+            
+            .feature-card {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .text {
+                justify-content: center;
+                padding-right: 20px;
+            }
+            
+            select {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+
+
+        .meusCursos {
+    min-height: 1000px; 
+    width: 100%;
 }
 
-h1 {
-    font-family: 'Fascinate', system-ui;
-    text-align: center;
-    color:rgba(71, 17, 17, 0.69);
-    box-shadow: pink;
-}
-
-
-
-.card-form{
-    background-color:rgba(246, 246, 246, 0.09);
-    width: 500px;
-    height: 500px;
-    border-radius:20px;
+.preços {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    margin: 40px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.card-form input{
-    margin: 10px 0;
-    padding: 8px;
-    border-radius: 10px;;
-    width: 80%;
+.preços img {
+    width: 300px;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(255,255,255,0.2);
 }
 
-
-button{
-    border-radius:5px;
-    transition: 0.5s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width:100px;
-
-
+.preços img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(255,255,255,0.4);
 }
 
-button:hover{
-
-    background-color:#808080;
-    transform: scale(1.1);
-    cursor:pointer;
-
-}
-
-select{
-
-    margin: 10px 0;
-    padding: 8px;
-    border-radius: 10px;;
-    width: 80%;
-
-
-
+@media (max-width: 768px) {
+    .preços {
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .preços img {
+        width: 250px;
+        height: 250px;
+    }
 }
 
     </style>
 </head>
 <body>
 
+<?php include 'header.php';?>
 
-<form method="POST" action="" target="blank">
+<main class="main-content">
+    <div class="hero-section floating">
+        <h2>Descubra a Música</h2>
+        <p>Explore o mundo dos instrumentos musicais e encontre sua paixão</p>
+    </div>
 
+    <section class="text">
+        <select onchange="location = this.value;">
+            <option value="" disabled selected>Escolha um instrumento</option>
+            <option value="Clarinete.php">🎵 Clarinete</option>
+            <option value="Sax.php">🎷 Saxofone</option>
+            <option value="Violino.php">🎻 Violino</option>
+        </select>
+    </section>
 
+    <section class="area-music">
+        <img src="imgmus/parti.jpeg" alt="Escola de Música">
+        <div class="music-overlay">
+            <h3>Escola de Música Music's</h3>
+            <p>Aprenda com os melhores professores</p>
+        </div>
+    </section>
 
-<h1>Music's &#9835;</h1>
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-music"></i>
+            <h3>Aulas Personalizadas</h3>
+            <p>Método adaptado ao seu ritmo de aprendizado</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Professores Qualificados</h3>
+            <p>Equipe com anos de experiência musical</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Aulas online com a didática perfeita</h3>
+        </div>
+    </section>
+</main>
+<div class="hero-section floating">
+        <h2>Preços que cabem no seu bolso</h2>
+        <p>Explore o mundo dos instrumentos musicais e encontre sua paixão</p>
+    </div>
 
-<div class="card-form"> 
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <br>
-    <input type="email" name="email" placeholder="Seu email" required> 
-    <br>
-
-    <select name="instrumento" required >
-        <option value="Escolher">Escolher</option>
-        <option value="Clarinete">Clarinete</option>
-        <option value="Violino">Violino</option>
-        <option value="Flauta">Flauta</option>
-        <option value="Saxofone">Saxofone</option>
-        <option value="Tuba">Tuba</option>
-        
-
-
-    </select>
-    <button type="submit" name="enviar">Enviar</button>
-</form>
-</div>
+<section class="preços">
     
+    <figure style="color:#fff;">
+        <img src="imgmus/clarinete.jpg" alt="Clarinete">
+        <figcaption>CLARINETE</figcaption>
+        <figcaption>99,90</figcaption>
+    </figure>
     
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  
+    <figure style="color:#fff;">
+        <img src="imgmus/alto.jpg" alt="Sax Alto">
+        <figcaption>SAX ALTO</figcaption>
+        <figcaption>99,90</figcaption>
+    </figure>
+    
+    <figure style="color:#fff;">
+        <img src="imgmus/Violin.jpg" alt="Violino">
+        <figcaption>VIOLINO</figcaption>
+        <figcaption>99,90</figcaption>
+    </figure>
+</section>
+
+<section class="meusCursos">
+
+
+
+
+
+
+
+</section>
+<?php include 'footer.php'?>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-
-$erros = [];
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    $nome = trim($_POST['nome'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $instrumento = $_POST['instrumento'] ?? '';
-
-    if(empty($nome)){
-        $erros[] = 'Nome é obrigatório';
-    }
-
-    if(empty($email)){
-        $erros[] = 'Email é obrigatório';
-    } 
-    elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $erros[] = 'Email inválido';
-    }
-
-    if(empty($erros)){
-
-        if($instrumento == "Clarinete"){
-            header('Location: Clarinete.php');
-            exit;
-        }
-
-        if($instrumento == "Violino"){
-            header('Location: Violino.php');
-            exit;
-        }
-
-        if($instrumento == "Flauta"){
-            header('Location: Flauta.php');
-            exit;
-        }
-
-        if($instrumento == "Saxofone"){
-            header('Location: Sax.php');
-            exit;
-        }
-
-        if($instrumento == "Tuba"){
-            header('Location: Tuba.php');
-            exit;
-        }
-        if($instrumento =="Escolher"){
-
-            return 'escolha o instrumento';
-        }
-
-    } else {
-
-        foreach ($erros as $erro) {
-            echo "<p style='color:red'>$erro</p>";
-        }
-
-    }
-
-}
-?>
