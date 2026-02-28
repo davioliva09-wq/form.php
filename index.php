@@ -429,20 +429,20 @@
     
     <figure style="color:#fff;">
         <img src="imgmus/clarinete.jpg" alt="Clarinete">
-        <figcaption>CLARINETE</figcaption>
-        <figcaption>99,90</figcaption>
+        <figcaption style="margin-top:44px;">CLARINETE</figcaption>
+        <figcaption><strong>R$ 99,90</strong></figcaption>
     </figure>
     
     <figure style="color:#fff;">
         <img src="imgmus/alto.jpg" alt="Sax Alto">
-        <figcaption>SAX ALTO</figcaption>
-        <figcaption>99,90</figcaption>
+        <figcaption style="margin-top:44px;">SAXOFONE</figcaption>
+        <figcaption><strong>R$ 99,90</strong></figcaption>
     </figure>
     
     <figure style="color:#fff;">
         <img src="imgmus/Violin.jpg" alt="Violino">
-        <figcaption>VIOLINO</figcaption>
-        <figcaption>99,90</figcaption>
+        <figcaption style="margin-top:44px;">VIOLINO</figcaption>
+        <figcaption><strong>R$ 99,90</strong></figcaption>
     </figure>
 </section>
 

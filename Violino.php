@@ -279,7 +279,7 @@
     </div>
 
     <?php include 'footer.php'?>
-    <?php include 'botao.php' ?>  
+    <?php include 'functions.php' ?>  
 
 </body>
 </html>
