@@ -1,7 +1,7 @@
 <script>
     function matricula(){
 
-        window.location.href= "conta.php" ;
+        window.location.href= "login.php" ;
 
 
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -374,6 +375,39 @@
     }
 }
 
+
+
+.area-botoes{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.btn{
+    padding: 12px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.entrar{
+    background-color: rgb(187, 187, 249);
+    color: #000;
+}
+
+.matricula{
+    background-color: rgb(187, 187, 249);
+    color: #000;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    opacity: 0.9;
+}
     </style>
 </head>
 <body>
@@ -385,18 +419,23 @@
         <h2>Descubra a Música</h2>
         <p>Explore o mundo dos instrumentos musicais e encontre sua paixão</p>
     </div>
+    <div class="area-botoes">
+    <a href="login.php" class="btn entrar">Entrar</a>
+    <a href="cadastro.php" class="btn matricula">Matricule-se</a>
+</div>
 
     <section class="text">
         <select onchange="location = this.value;">
-            <option value="" disabled selected>Escolha um instrumento</option>
+            <option value="" disabled selected>Conheça os instrumentos</option>
             <option value="Clarinete.php">🎵 Clarinete</option>
             <option value="Sax.php">🎷 Saxofone</option>
             <option value="Violino.php">🎻 Violino</option>
         </select>
     </section>
+    <h1>Bem-vindo <?php echo $_SESSION['usuario_cadastrado']; ?></h1>
 
     <section class="area-music">
-        <img src="imgmus/parti.jpeg" alt="Escola de Música">
+    <img src="imgmus/parti.jpeg" alt="Escola de Música">
         <div class="music-overlay">
             <h3>Escola de Música Music's</h3>
             <p>Aprenda com os melhores professores</p>
@@ -406,8 +445,7 @@
     <section class="features">
         <div class="feature-card">
             <i class="fas fa-music"></i>
-            <h3>Aulas Personalizadas</h3>
-            <p>Método adaptado ao seu ritmo de aprendizado</p>
+            <h3>Ensino especializade em crianças</h3>
         </div>
         <div class="feature-card">
             <i class="fas fa-chalkboard-teacher"></i>
@@ -428,13 +466,18 @@
 <section class="preços">
     
     <figure style="color:#fff;">
-        <img src="imgmus/clarinete.jpg" alt="Clarinete">
+    <a href="aulaClarinet.php">
+    <img src="imgmus/clarinete.jpg" alt="Clarinete">
+</a>
         <figcaption style="margin-top:44px;">CLARINETE</figcaption>
         <figcaption><strong>R$ 99,90</strong></figcaption>
+
     </figure>
     
+    <a href="SaxAula.php">
     <figure style="color:#fff;">
         <img src="imgmus/alto.jpg" alt="Sax Alto">
+</a>
         <figcaption style="margin-top:44px;">SAXOFONE</figcaption>
         <figcaption><strong>R$ 99,90</strong></figcaption>
     </figure>
@@ -455,7 +498,8 @@
 
 
 </section>
-<?php include 'footer.php'?>
+<?php include 'footer.php';
+?>
 
 </body>
 </html>
