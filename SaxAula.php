@@ -73,7 +73,7 @@ session_start();
         .video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             background: #000;
         }
 
@@ -114,7 +114,6 @@ session_start();
             border: 1px solid rgba(255, 107, 107, 0.3);
         }
 
-        /* Botões de navegação */
         #carouselVideos .carousel-control-prev,
         #carouselVideos .carousel-control-next {
             width: 50px;
@@ -143,7 +142,6 @@ session_start();
             right: -20px;
         }
 
-        /* Indicadores */
         #carouselVideos .carousel-indicators {
             position: static;
             margin-top: 30px;

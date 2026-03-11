@@ -428,11 +428,16 @@ session_start();
         <select onchange="location = this.value;">
             <option value="" disabled selected>Conheça os instrumentos</option>
             <option value="Clarinete.php">🎵 Clarinete</option>
-            <option value="Sax.php">🎷 Saxofone</option>
+            <option value="pag.php">🎷 Saxofone</option>
             <option value="Violino.php">🎻 Violino</option>
         </select>
     </section>
     <h1>Bem-vindo <?php echo $_SESSION['usuario_cadastrado']; ?></h1>
+    <select onchange="location = this.value;">
+            <option value="" disabled selected>Conheça os instrumentos</option>
+           
+        </select>    </div>
+
 
     <section class="area-music">
     <img src="imgmus/parti.jpeg" alt="Escola de Música">

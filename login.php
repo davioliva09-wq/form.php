@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($usuario == $usuarioCorreto && $senha == $senhaCorreta) {
         $_SESSION['logado'] = true;
         $_SESSION['usuario'] = $usuario;
-        header('Location: pag.php');
+        header('Location: index.php');
         exit;
     } else {
         $erro = 'Usuário ou senha inválidos';
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <form method="POST">
     <div class="card-login">
         <h2>Login</h2>
-
+</LLLL>
         <?php if (!empty($erro)): ?>
             <div class="erro"><?= $erro ?></div>
         <?php endif; ?>
