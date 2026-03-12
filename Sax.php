@@ -259,7 +259,7 @@ Atualmente, o saxofone é amplamente utilizado em diversos estilos musicais, com
 
     <div class="video-section">
         <p>Conheça o som do saxofone</p>
-        <iframe width="560" height="315" src="https://youtu.be/XBWyE1v8--I?si=5ufFKvKe6muQqqR6" 
+        <iframe width="560" height="315" src="https://youtu.be/tL6oQ3pD8rI?si=m5VdLYs-ywJJqEkn"
 title="Careless Whisper Sax" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
