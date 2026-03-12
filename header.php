@@ -10,11 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
     <?php include 'functions.php';?>
     <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body{
+            margin: 0;
+            padding: 0;
+        }
         .topo {
            /* position: fixed;
             top: 0;*/
             width: 100%;
             height: 80px;
+            margin-top:0;
             background-color: rgb(187, 187, 249);
             display: flex;
             align-items: center;
