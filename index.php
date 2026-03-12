@@ -424,19 +424,31 @@ session_start();
     <a href="cadastro.php" class="btn matricula">Matricule-se</a>
 </div>
 
-    <section class="text">
-        <select onchange="location = this.value;">
-            <option value="" disabled selected>Conheça os instrumentos</option>
-            <option value="Clarinete.php">🎵 Clarinete</option>
-            <option value="pag.php">🎷 Saxofone</option>
-            <option value="Violino.php">🎻 Violino</option>
-        </select>
-    </section>
-    <h1>Bem-vindo <?php echo $_SESSION['usuario_cadastrado']; ?></h1>
+<section class="text">
     <select onchange="location = this.value;">
-            <option value="" disabled selected>Conheça os instrumentos</option>
-           
-        </select>    </div>
+        <option value="" disabled selected>Escolha um instrumento</option>
+        <option value="Clarinete.php">Clarinete</option>
+        <option value="pag.php?curso=sax">Saxofone</option>
+        <option value="pag.php?curso=violino">Violino</option>
+    </select>
+</section>
+<h1 style="  font-family: 'Fascinate', cursive;
+            font-size: 24px;
+            color: #000;
+            margin-left: 15px;
+            padding-left: 15px;
+            white-space: normal; 
+            max-width: none; 
+            overflow: visible; 
+            text-overflow: clip; 
+            line-height: 1.2;"> Seja bem vindo, <?php echo htmlspecialchars($_SESSION['usuario_cadastrado'] ?? 'Aluno'); ?></h1>
+<select onchange="location = this.value;">
+    
+    <option value="" disabled selected>Conheça os instrumentos</option>
+    <option value="Clarinete.php">Clarinete</option>
+    <option value="Sax.php">Saxofone</option>
+    <option value="Violin.php">Violino</option>
+</select>
 
 
     <section class="area-music">
@@ -471,7 +483,7 @@ session_start();
 <section class="preços">
     
     <figure style="color:#fff;">
-    <a href="aulaClarinet.php">
+    <a href="pag.php">
     <img src="imgmus/clarinete.jpg" alt="Clarinete">
 </a>
         <figcaption style="margin-top:44px;">CLARINETE</figcaption>
@@ -479,7 +491,7 @@ session_start();
 
     </figure>
     
-    <a href="SaxAula.php">
+    <a href="pag.php">
     <figure style="color:#fff;">
         <img src="imgmus/alto.jpg" alt="Sax Alto">
 </a>
@@ -487,6 +499,8 @@ session_start();
         <figcaption><strong>R$ 99,90</strong></figcaption>
     </figure>
     
+    <a href="pag.php">
+
     <figure style="color:#fff;">
         <img src="imgmus/Violin.jpg" alt="Violino">
         <figcaption style="margin-top:44px;">VIOLINO</figcaption>
