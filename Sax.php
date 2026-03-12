@@ -19,7 +19,7 @@
             font-family: Arial, sans-serif;
             font-size: 17px;
             color: #fff;
-            background-color: #fff;
+            background-color: #000;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
