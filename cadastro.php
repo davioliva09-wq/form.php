@@ -5,14 +5,14 @@ $erro = '';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-    $usuario = $_POST['usuario'] ?? '';
+    $usuario = $_POST['usuario_logado'] ?? '';
     $senha = $_POST['senha'] ?? '';
 
     if(!empty($usuario) && !empty($senha)){
 
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-        $_SESSION['usuario_cadastrado'] = $usuario;
+        $_SESSION['usuario_logado'] = $usuario;
         $_SESSION['senha_cadastrada'] = $senhaHash;
 
         header('Location: index.php');
@@ -78,7 +78,7 @@ body{
 <p class="erro"><?= $erro ?></p>
 <?php endif; ?>
 
-<input type="text" name="usuario" placeholder="Usuário" required>
+<input type="text" name="usuario_logado" placeholder="Usuário" required>
 <input type="password" name="senha" placeholder="Senha" required>
 
 <button type="submit">Cadastrar</button>

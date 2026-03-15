@@ -190,7 +190,7 @@ session_start();
 <?php include 'header.php'; ?>
 
 <h1>
-    🎵 Bem vindo ao curso de Clarinete, <?php echo htmlspecialchars($_SESSION['usuario_cadastrado'] ?? 'Aluno'); ?>!
+    🎵 Bem vindo ao curso de Clarinete, <?php echo htmlspecialchars($_SESSION['usuario_logado'] ?? 'Aluno'); ?>!
 </h1>
 
 <section class="container-aulas">

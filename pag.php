@@ -8,19 +8,19 @@ $curso = $_GET['curso'] ?? '';
 
   $cursosDisponiveis = [
     'clarinete' => 99.90,
-    'sax' => 99.90,
-    'violino' => 90.00];
+    'sax' => 9.90,
+    'violino' => 90.90];
 
 
 
 switch(strtolower($curso)){
     case 'clarinete':
         $nomeCurso = 'Clarinete';
-        $valor = 'R$ 99,90';
+        $valor = 'R$ 90,90';
         break;
     case 'sax':
         $nomeCurso = 'Saxofone';
-        $valor = 'R$ 99,90';
+        $valor = 'R$ 9,90';
         break;
     case 'violino':
         $nomeCurso = 'Violino';
@@ -83,8 +83,11 @@ body{
     box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 h1{text-align:center;margin-bottom:30px;}
+
 .form-group{margin-bottom:20px;}
+
 label{display:block;margin-bottom:5px;font-weight:bold;}
+
 input, select{
     width:100%;
     padding:12px;

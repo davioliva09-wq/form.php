@@ -408,6 +408,11 @@ session_start();
     transform: scale(1.05);
     opacity: 0.9;
 }
+
+
+.instrumentimg:hover{
+    cursor:pointer;
+}
     </style>
 </head>
 <body>
@@ -426,7 +431,7 @@ session_start();
 
 <section class="text">
     <select onchange="location = this.value;">
-        <option value="" disabled selected>Escolha um instrumento</option>
+    <option value="" disabled selected>Conheça os instrumentos</option>
         <option value="Clarinete.php">Clarinete</option>
         <option value="pag.php?curso=sax">Saxofone</option>
         <option value="pag.php?curso=violino">Violino</option>
@@ -441,10 +446,9 @@ session_start();
             max-width: none; 
             overflow: visible; 
             text-overflow: clip; 
-            line-height: 1.2;"> Seja bem vindo, <?php echo htmlspecialchars($_SESSION['usuario_cadastrado'] ?? 'Aluno'); ?></h1>
+            line-height: 1.2;"> Seja bem vindo, <?php echo htmlspecialchars($_SESSION['usuario_logado'] ?? 'Aluno'); ?></h1>
 <select onchange="location = this.value;">
     
-    <option value="" disabled selected>Conheça os instrumentos</option>
     <option value="Clarinete.php">Clarinete</option>
     <option value="Sax.php">Saxofone</option>
     <option value="Violin.php">Violino</option>
@@ -480,45 +484,41 @@ session_start();
         <p>Explore o mundo dos instrumentos musicais e encontre sua paixão</p>
     </div>
 
-<section class="preços">
-    
-    <figure style="color:#fff;">
-    <a href="pag.php">
-    <img src="imgmus/clarinete.jpg" alt="Clarinete">
-</a>
-        <figcaption style="margin-top:44px;">CLARINETE</figcaption>
-        <figcaption><strong>R$ 99,90</strong></figcaption>
+    <section class="preços">
 
-    </figure>
+<figure style="color:#fff;">
+        <img src="imgmus/clarinete.jpg" alt="Clarinete" onclick="veri('Clarinete')" class="instrumentimg">
     
-    <a href="pag.php">
-    <figure style="color:#fff;">
-        <img src="imgmus/alto.jpg" alt="Sax Alto">
-</a>
-        <figcaption style="margin-top:44px;">SAXOFONE</figcaption>
-        <figcaption><strong>R$ 99,90</strong></figcaption>
-    </figure>
-    
-    <a href="pag.php">
+    <figcaption style="margin-top:44px;">CLARINETE</figcaption>
+    <figcaption><strong>R$ 99,90</strong></figcaption>
+</figure>
 
-    <figure style="color:#fff;">
+<figure style="color:#fff;">
+
+<img src="imgmus/alto.jpg" alt="Sax Alto" onclick="veri('Sax')" class="instrumentimg">
+
+    <figcaption style="margin-top:44px;">SAXOFONE</figcaption>
+    <figcaption><strong>R$ 99,90</strong></figcaption>
+</figure>
+
+<figure style="color:#fff;">
+    <a href="pag.php?curso=violino">
         <img src="imgmus/Violin.jpg" alt="Violino">
-        <figcaption style="margin-top:44px;">VIOLINO</figcaption>
-        <figcaption><strong>R$ 99,90</strong></figcaption>
-    </figure>
-</section>
-
-<section class="meusCursos">
-
-
-
-
-
+    </a>
+    <figcaption style="margin-top:44px;">VIOLINO</figcaption>
+    <figcaption><strong>R$ 99,90</strong></figcaption>
+</figure>
 
 
 </section>
+
+
+
+
+<section style="min-height: 600px;
+width: 100%;"></section>
 <?php include 'footer.php';
 ?>
-
+<script src="functions.php"></script>
 </body>
 </html>

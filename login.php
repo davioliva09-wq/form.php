@@ -8,12 +8,12 @@ $senha_hash = password_hash($senhaCorreta, PASSWORD_DEFAULT);
 $erro = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $usuario = $_POST['usuario'] ?? '';
+    $usuario = $_POST['usuario_logado'] ?? '';
     $senha = $_POST['senha'] ?? '';
     
     if ($usuario == $usuarioCorreto && $senha == $senhaCorreta) {
         $_SESSION['logado'] = true;
-        $_SESSION['usuario'] = $usuario;
+        $_SESSION['usuario_logado'] = $usuario;
         header('Location: index.php');
         exit;
     } else {
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="erro"><?= $erro ?></div>
         <?php endif; ?>
 
-        <input type="text" name="usuario" placeholder="Usuário" required>
+        <input type="text" name="usuario_logado" placeholder="Usuário" required>
         <input type="password" name="senha" placeholder="Senha" required>
 
         <button type="submit">Entrar</button>
