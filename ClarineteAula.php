@@ -1,5 +1,15 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['usuario_logado'])){
+    header("Location: login.php");
+    exit;
+}
+
+if(isset($_SESSION['curso_clarinete'])){
+    header("Location: ClarineteAula.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>

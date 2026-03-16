@@ -1,5 +1,26 @@
 <?php
 session_start();
+$cursos = [
+    [
+        "curso" => "Clarinete",
+        "preco" => 150.00,
+    ],
+    [
+        "curso" => "Sax",
+        "preco" => 130.00,
+        
+    ],
+    [
+        "curso" => "Violino",
+        "preco" => 140.00,
+    ],
+    
+];
+
+
+
+foreach ($cursos as $curso) {
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -453,7 +474,7 @@ session_start();
     <option value="Sax.php">Saxofone</option>
     <option value="Violin.php">Violino</option>
 </select>
-
+<button onclick="window.location.href='logout.php'">Sair</button>
 
     <section class="area-music">
     <img src="imgmus/parti.jpeg" alt="Escola de Música">
@@ -489,24 +510,23 @@ session_start();
 <figure style="color:#fff;">
         <img src="imgmus/clarinete.jpg" alt="Clarinete" onclick="veri('Clarinete')" class="instrumentimg">
     
-    <figcaption style="margin-top:44px;">CLARINETE</figcaption>
-    <figcaption><strong>R$ 99,90</strong></figcaption>
+        <figcaption style="margin-top:44px;"><?php echo $cursos[0]['curso']; ?></figcaption>
+<figcaption><strong>R$ <?php echo number_format($cursos[0]['preco'], 2, ',', '.'); ?></strong></figcaption>
 </figure>
-
 <figure style="color:#fff;">
 
 <img src="imgmus/alto.jpg" alt="Sax Alto" onclick="veri('Sax')" class="instrumentimg">
 
-    <figcaption style="margin-top:44px;">SAXOFONE</figcaption>
-    <figcaption><strong>R$ 99,90</strong></figcaption>
+<figcaption style="margin-top:44px;"><?php echo $cursos[1]['curso']; ?></figcaption>
+<figcaption><strong>R$ <?php echo number_format($cursos[1]['preco'], 2, ',', '.'); ?></strong></figcaption>
 </figure>
 
 <figure style="color:#fff;">
     <a href="pag.php?curso=violino">
-        <img src="imgmus/Violin.jpg" alt="Violino">
+        <img src="imgmus/Violin.jpg" alt="Violino" onclick="veri('Violino')"class="instrumentimg">
     </a>
-    <figcaption style="margin-top:44px;">VIOLINO</figcaption>
-    <figcaption><strong>R$ 99,90</strong></figcaption>
+    <figcaption style="margin-top:44px;"><?php echo $cursos[2]['curso']; ?></figcaption>
+<figcaption><strong>R$ <?php echo number_format($cursos[2]['preco'], 2, ',', '.'); ?></strong></figcaption>
 </figure>
 
 
@@ -522,3 +542,10 @@ width: 100%;"></section>
 <script src="functions.php"></script>
 </body>
 </html>
+
+
+
+
+
+
+
