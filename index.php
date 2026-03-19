@@ -434,6 +434,22 @@ foreach ($cursos as $curso) {
 .instrumentimg:hover{
     cursor:pointer;
 }
+
+
+
+
+.sair{
+    margin-top:10px;
+    border-radius:6px;
+    width:49px; 59px;
+    background:rgb(187, 187, 249);
+}
+.sair:hover{
+cursor: pointer;
+
+transform: scale(1.05); 
+    transition: transform 0.2s ease; 
+}
     </style>
 </head>
 <body>
@@ -474,7 +490,7 @@ foreach ($cursos as $curso) {
     <option value="Sax.php">Saxofone</option>
     <option value="Violin.php">Violino</option>
 </select>
-<button onclick="window.location.href='logout.php'">Sair</button>
+<button onclick="window.location.href='logout.php'" class="sair">Sair</button>
 
     <section class="area-music">
     <img src="imgmus/parti.jpeg" alt="Escola de Música">

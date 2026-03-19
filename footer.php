@@ -2,7 +2,7 @@
     background-color: rgb(187, 187, 249);
     padding: 30px 20px;
     text-align: center;
-    margin-top: 50px;
+    margin: 0;
     border-top: 3px solid rgba(0,0,0,0.1);
     font-family: Arial, sans-serif;
     width: 100%;
@@ -12,6 +12,15 @@
     align-items: center;
     justify-content: center;
 ">
+
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+</style>
     <p style="margin: 5px 0; font-size: 16px; font-weight: bold; color: #000;">
         &copy; <?php echo date('Y'); ?> - Sistema de Inscrição Musical
     </p>
@@ -26,6 +35,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+        margin-bottm: 0;
         align-items: center;
     ">
         <a href="#" style="color: #000; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Política de Privacidade</a>
