@@ -195,8 +195,8 @@ if(!isset($_SESSION['usuario_logado'])){
 <?php include 'header.php'; ?>
 
 <h1>
-    🎵 Bem vindo ao curso de Saxofone, <?php echo htmlspecialchars($_SESSION['usuario_cadastrado'] ?? 'Aluno'); ?>!
-</h1>
+    🎵 Bem vindo ao curso de Sax, <?php echo htmlspecialchars($_SESSION['usuario_logado'] ?? 'Aluno'); ?>!
+    </h1>
 
 <section class="container-aulas">
     <div id="carouselVideos" class="carousel slide" data-bs-ride="carousel">
@@ -345,7 +345,7 @@ if(!isset($_SESSION['usuario_logado'])){
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<?php include 'functions.php'?>
 </body>
 <?php include 'footer.php'?>
 </html>

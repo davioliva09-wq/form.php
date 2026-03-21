@@ -12,19 +12,24 @@ function voltar(){
     window.location.href = "index.php";
 }
 
-function veri(instrumento){
-
-if(!usuarioLogado){
-    window.location.href = "login.php";
-}else{
-    //window.location.href = instrumento + "aula" + ".php";
-    switch(instrumento) {
-        case "Clarinete":
-        window.location.href = "ClarineteAula.php";
-        break;
+function veri(instrumento) {
+    if (!usuarioLogado) {
+        window.location.href = 'login.php'; 
+    } else {
+        switch(instrumento) {
+            case 'Clarinete': 
+                window.location.href = 'ClarineteAula.php'; 
+                break;
+            case 'Sax': // Added missing value
+                window.location.href = 'SaxAula.php'; 
+                break;
+            case 'Violino': 
+                window.location.href = 'ClarineteAula.php'; 
+                break;
+            default:
+                console.log('Instrumento não reconhecido');
+        }
     }
-}
-
 }
 
     

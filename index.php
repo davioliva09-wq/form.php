@@ -538,7 +538,7 @@ transform: scale(1.05);
 </figure>
 
 <figure style="color:#fff;">
-    <a href="pag.php?curso=violino">
+   <!-- <a href="pag.php?curso=violino">-->
         <img src="imgmus/Violin.jpg" alt="Violino" onclick="veri('Violino')"class="instrumentimg">
     </a>
     <figcaption style="margin-top:44px;"><?php echo $cursos[2]['curso']; ?></figcaption>

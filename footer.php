@@ -42,8 +42,9 @@ html, body {
         <span style="color: #000; font-weight: bold;">|</span>
         <a href="#" style="color: #000; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Termos de Uso</a>
         <span style="color: #000; font-weight: bold;">|</span>
-        <a href="#" style="color: #000; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Contato</a>
-    </div>
+        <a href="https://wa.me/5511984535923" style="color: #000; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+    Contato
+</a>    </div>
     
     <p style="margin: 10px 0 0 0; font-size: 13px; color: #333; font-style: italic;">
         Desenvolvido com <span style="color: #ff0000;">❤️</span> para a música
