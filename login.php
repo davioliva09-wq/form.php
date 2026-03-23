@@ -1,23 +1,41 @@
 <?php
+require_once 'conexao.php'; // Importante para ter a variável $conn
 session_start();
-
-$usuarioCorreto = 'Davi';
-$senhaCorreta = '123456';
-$senha_hash = password_hash($senhaCorreta, PASSWORD_DEFAULT);
 
 $erro = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $usuario = $_POST['usuario_logado'] ?? '';
-    $senha = $_POST['senha'] ?? '';
-    
-    if ($usuario == $usuarioCorreto && $senha == $senhaCorreta) {
-        $_SESSION['logado'] = true;
-        $_SESSION['usuario_logado'] = $usuario;
-        header('Location: index.php');
-        exit;
+    // 1. Pega os dados do formulário
+    $usuario = trim($_POST['usuario_logado'] ?? '');
+    $senha_digitada = $_POST['senha'] ?? '';
+
+    if (empty($usuario) || empty($senha_digitada)) {
+        $erro = "Preencha todos os campos.";
     } else {
-        $erro = 'Usuário ou senha inválidos';
+        // 2. Busca o usuário no banco de dados usando Prepared Statement (Segurança!)
+        $stmt = $conn->prepare("SELECT nome, senha FROM usuarios WHERE nome = ?");
+        $stmt->bind_param("s", $usuario);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        if ($resultado->num_rows === 1) {
+            $dados = $resultado->fetch_assoc();
+
+            // 3. Verifica se a senha digitada bate com o Hash do banco
+            if (password_verify($senha_digitada, $dados['senha'])) {
+                // SUCESSO! Inicia a sessão
+                $_SESSION['logado'] = true;
+                $_SESSION['usuario_logado'] = $dados['nome'];
+                
+                header('Location: index.php');
+                exit;
+            } else {
+                $erro = 'Usuário ou senha inválidos';
+            }
+        } else {
+            $erro = 'Usuário ou senha inválidos';
+        }
+        $stmt->close();
     }
 }
 ?>

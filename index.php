@@ -1,26 +1,9 @@
 <?php
+require_once 'conexao.php';
 session_start();
-$cursos = [
-    [
-        "curso" => "Clarinete",
-        "preco" => 150.00,
-    ],
-    [
-        "curso" => "Sax",
-        "preco" => 130.00,
-        
-    ],
-    [
-        "curso" => "Violino",
-        "preco" => 140.00,
-    ],
-    
-];
 
-
-
-foreach ($cursos as $curso) {
-}
+$resultado = $conn->query("SELECT id_curso, nome_curso, preco FROM cursos");
+$cursos = $resultado->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -347,109 +330,106 @@ foreach ($cursos as $curso) {
             animation: float 6s ease-in-out infinite;
         }
 
-
-
         .meusCursos {
-    min-height: 1000px; 
-    width: 100%;
-}
+            min-height: 1000px; 
+            width: 100%;
+        }
 
-.preços {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    margin: 40px 0;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .preços {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 20px 10px;
+            margin: 40px 0;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.preços img {
-    width: 300px;
-    height: 300px;
-    background: white;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 3px solid rgba(255,255,255,0.2);
-}
+        .preços img {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 100%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid rgba(255,255,255,0.2);
+        }
 
-.preços img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    border-color: rgba(255,255,255,0.4);
-}
+        .preços img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: rgba(255,255,255,0.4);
+            cursor: pointer;
+        }
 
-@media (max-width: 768px) {
-    .preços {
-        gap: 30px;
-        padding: 20px;
-    }
-    
-    .preços img {
-        width: 250px;
-        height: 250px;
-    }
-}
+        @media (max-width: 768px) {
+            .preços {
+                gap: 30px;
+                padding: 20px;
+            }
+            
+            .preços img {
+                width: 250px;
+                height: 250px;
+                border-radius:50%;
+            }
+        }
 
+        .area-botoes{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 60px;
+        }
 
+        .btn{
+            padding: 12px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
 
-.area-botoes{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 60px;
-}
+        .entrar{
+            background-color: rgb(187, 187, 249);
+            color: #000;
+        }
 
-.btn{
-    padding: 12px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: 0.3s ease;
-    display: inline-block;
-}
+        .matricula{
+            background-color: rgb(187, 187, 249);
+            color: #000;
+        }
 
-.entrar{
-    background-color: rgb(187, 187, 249);
-    color: #000;
-}
+        .btn:hover{
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
 
-.matricula{
-    background-color: rgb(187, 187, 249);
-    color: #000;
-}
+        .sair{
+            margin-top:10px;
+            border-radius:6px;
+            width: 59px;
+            background:rgb(187, 187, 249);
+        }
+        .sair:hover{
+            cursor: pointer;
+            transform: scale(1.05); 
+            transition: transform 0.2s ease; 
+        }
 
-.btn:hover{
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-
-.instrumentimg:hover{
-    cursor:pointer;
-}
-
-
-
-
-.sair{
-    margin-top:10px;
-    border-radius:6px;
-    width:49px; 59px;
-    background:rgb(187, 187, 249);
-}
-.sair:hover{
-cursor: pointer;
-
-transform: scale(1.05); 
-    transition: transform 0.2s ease; 
-}
+        .frase {
+            font-family: 'Story Script', cursive;
+            font-size: 2em;
+            color: #fff;
+            display: block;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -458,42 +438,23 @@ transform: scale(1.05);
 
 <main class="main-content">
     <div class="hero-section floating">
-        <h2>Descubra a Música</h2>
+        <span class="frase">"Tocar uma nota errada é insignificante. Tocar sem paixão é imperdoável"</span>
         <p>Explore o mundo dos instrumentos musicais e encontre sua paixão</p>
     </div>
     <div class="area-botoes">
-    <a href="login.php" class="btn entrar">Entrar</a>
-    <a href="cadastro.php" class="btn matricula">Matricule-se</a>
-</div>
+        <a href="login.php" class="btn entrar">Entrar</a>
+        <a href="cadastro.php" class="btn matricula">Matricule-se</a>
+    </div>
 
-<section class="text">
-    <select onchange="location = this.value;">
-    <option value="" disabled selected>Conheça os instrumentos</option>
-        <option value="Clarinete.php">Clarinete</option>
-        <option value="pag.php?curso=sax">Saxofone</option>
-        <option value="pag.php?curso=violino">Violino</option>
-    </select>
-</section>
-<h1 style="  font-family: 'Fascinate', cursive;
-            font-size: 24px;
-            color: #000;
-            margin-left: 15px;
-            padding-left: 15px;
-            white-space: normal; 
-            max-width: none; 
-            overflow: visible; 
-            text-overflow: clip; 
-            line-height: 1.2;"> Seja bem vindo, <?php echo htmlspecialchars($_SESSION['usuario_logado'] ?? 'Aluno'); ?></h1>
-<select onchange="location = this.value;">
+    <h1 style="font-family: 'Fascinate', cursive; margin-top:15px; font-size: 24px; color: #000; margin-left: 15px; padding-left: 15px; white-space: normal; max-width: none; overflow: visible; text-overflow: clip; line-height: 1.2;">
+        Seja bem vindo, <?php echo htmlspecialchars($_SESSION['usuario_logado'] ?? 'Aluno'); ?>
+    </h1>
     
-    <option value="Clarinete.php">Clarinete</option>
-    <option value="Sax.php">Saxofone</option>
-    <option value="Violin.php">Violino</option>
-</select>
-<button onclick="window.location.href='logout.php'" class="sair">Sair</button>
+    <section class="text"></section>
+    <button onclick="window.location.href='logout.php'" class="sair">Sair</button>
 
     <section class="area-music">
-    <img src="imgmus/parti.jpeg" alt="Escola de Música">
+        <img src="imgmus/parti.jpeg" alt="Escola de Música">
         <div class="music-overlay">
             <h3>Escola de Música Music's</h3>
             <p>Aprenda com os melhores professores</p>
@@ -503,7 +464,7 @@ transform: scale(1.05);
     <section class="features">
         <div class="feature-card">
             <i class="fas fa-music"></i>
-            <h3>Ensino especializade em crianças</h3>
+            <h3>Ensino especializado em crianças</h3>
         </div>
         <div class="feature-card">
             <i class="fas fa-chalkboard-teacher"></i>
@@ -516,52 +477,49 @@ transform: scale(1.05);
         </div>
     </section>
 </main>
+
 <div class="hero-section floating">
-        <h2>Preços que cabem no seu bolso</h2>
-        <p>Explore o mundo dos instrumentos musicais e encontre sua paixão</p>
-    </div>
+    <h2>Preços que cabem no seu bolso</h2>
+    <p>Explore o mundo dos instrumentos musicais e encontre sua paixão</p>
+</div>
 
-    <section class="preços">
-
-<figure style="color:#fff;">
+<section class="preços">
+    <?php if(count($cursos) >= 1): ?>
+    <figure style="color:#fff;">
         <img src="imgmus/clarinete.jpg" alt="Clarinete" onclick="veri('Clarinete')" class="instrumentimg">
+        <figcaption style="margin-top:44px;"><?php echo htmlspecialchars($cursos[0]['nome_curso']); ?></figcaption>
+        <figcaption><strong>R$ <?php echo number_format($cursos[0]['preco'], 2, ',', '.'); ?></strong></figcaption>
+    </figure>
+    <?php endif; ?>
     
-        <figcaption style="margin-top:44px;"><?php echo $cursos[0]['curso']; ?></figcaption>
-<figcaption><strong>R$ <?php echo number_format($cursos[0]['preco'], 2, ',', '.'); ?></strong></figcaption>
-</figure>
-<figure style="color:#fff;">
-
-<img src="imgmus/alto.jpg" alt="Sax Alto" onclick="veri('Sax')" class="instrumentimg">
-
-<figcaption style="margin-top:44px;"><?php echo $cursos[1]['curso']; ?></figcaption>
-<figcaption><strong>R$ <?php echo number_format($cursos[1]['preco'], 2, ',', '.'); ?></strong></figcaption>
-</figure>
-
-<figure style="color:#fff;">
-   <!-- <a href="pag.php?curso=violino">-->
-        <img src="imgmus/Violin.jpg" alt="Violino" onclick="veri('Violino')"class="instrumentimg">
-    </a>
-    <figcaption style="margin-top:44px;"><?php echo $cursos[2]['curso']; ?></figcaption>
-<figcaption><strong>R$ <?php echo number_format($cursos[2]['preco'], 2, ',', '.'); ?></strong></figcaption>
-</figure>
-
-
+    <?php if(count($cursos) >= 2): ?>
+    <figure style="color:#fff;">
+        <img src="imgmus/alto.jpg" alt="Sax Alto" onclick="veri('Sax')" class="instrumentimg">
+        <figcaption style="margin-top:44px;"><?php echo htmlspecialchars($cursos[1]['nome_curso']); ?></figcaption>
+        <figcaption><strong>R$ <?php echo number_format($cursos[1]['preco'], 2, ',', '.'); ?></strong></figcaption>
+    </figure>
+    <?php endif; ?>
+    
+    <?php if(count($cursos) >= 3): ?>
+    <figure style="color:#fff;">
+        <img src="imgmus/Violin.jpg" alt="Violino" onclick="veri('Violino')" class="instrumentimg">
+        <figcaption style="margin-top:44px;"><?php echo htmlspecialchars($cursos[2]['nome_curso']); ?></figcaption>
+        <figcaption><strong>R$ <?php echo number_format($cursos[2]['preco'], 2, ',', '.'); ?></strong></figcaption>
+    </figure>
+    <?php endif; ?>
+    
+    <?php if(count($cursos) >= 4): ?>
+    <figure style="color:#fff;">
+        <img src="imgmus/flautatr.jpg" alt="Flauta" onclick="veri('Flauta')" class="instrumentimg">
+        <figcaption style="margin-top:44px;"><?php echo htmlspecialchars($cursos[3]['nome_curso']); ?></figcaption>
+        <figcaption><strong>R$ <?php echo number_format($cursos[3]['preco'], 2, ',', '.'); ?></strong></figcaption>
+    </figure>
+    <?php endif; ?>
 </section>
 
+<section style="min-height: 600px; width: 100%;"></section>
 
-
-
-<section style="min-height: 600px;
-width: 100%;"></section>
-<?php include 'footer.php';
-?>
+<?php include 'footer.php'; ?>
 <script src="functions.php"></script>
 </body>
 </html>
-
-
-
-
-
-
-
