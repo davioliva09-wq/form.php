@@ -335,6 +335,24 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             width: 100%;
         }
 
+
+        .btn-custom {
+            background-color: rgb(187, 187, 249);
+            color: #000;
+            border: 2px solid #000;
+            padding: 15px 40px;
+            font-size: 24px;
+            font-family: 'Fascinate', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+        }
+
+        .btn-custom:hover {
+            background-color: #fff;
+            color: rgb(187, 187, 249);
+        }
         .preços {
             display: flex;
             justify-content: center;
@@ -518,6 +536,11 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
 </section>
 
 <section style="min-height: 600px; width: 100%;"></section>
+
+
+
+<button class="btn-custom" onclick="window.location.href='professor.php'">acesso para professores</button>
+
 
 <?php include 'footer.php'; ?>
 <script src="functions.php"></script>
