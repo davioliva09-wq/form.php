@@ -25,7 +25,7 @@
             flex: 1;
             padding-top: 100px;
             text-align: center;
-            margin-bottom:740px;
+            margin-bottom:350px;
         }
 
         h1 {
@@ -75,13 +75,6 @@
         .card:hover {
             transform: translateY(-5px);
         }
-
-        @media (max-width: 768px) {
-            .card img {
-                width: 150px;
-                height: 150px;
-            }
-        }
     </style>
 </head>
 
@@ -94,22 +87,22 @@
 
     <div class="instrumentos">
 
-        <a href="pag.php?curso=clarinete" class="card">
-            <img src="imgmus/clarinete.jpg">
+        <a href="ClarineteAula.php" class="card">
+            <img src="imgmus/clarinete.jpg" onclick="veri('Clarinete')">
             <span>Clarinete</span>
         </a>
 
-        <a href="pag.php?curso=sax" class="card">
+        <a href="SaxAula.php" class="card">
             <img src="imgmus/Saxalto.jpeg">
             <span>Saxofone</span>
         </a>
 
-        <a href="pag.php?curso=violino" class="card">
+        <a href="SaxAula.php" class="card">
             <img src="imgmus/Violin.jpg">
             <span>Violino</span>
         </a>
 
-        <a href="#" class="card">
+        <a href="SaxAula.php" class="card">
             <img src="imgmus/flautatr.jpg">
             <span>Flauta</span>
         </a>
@@ -118,6 +111,7 @@
 </div>
 
 <?php include 'footer.php'; ?>
+<?php include 'functions.php'; ?>
 
 </body>
 </html>
