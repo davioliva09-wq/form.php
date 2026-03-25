@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $usuario_db = 'root';
-$senha_db = '';      
+$senha_db = '2026';      
 $nome_banco = 'musics'; 
 
 $conn = new mysqli($host, $usuario_db, $senha_db, $nome_banco);
