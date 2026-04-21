@@ -11,10 +11,9 @@ $sucesso = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Pegando os dados e limpando espaços
     $usuario = trim($_POST['usuario_logado'] ?? '');
-    $email = trim($_POST['email'] ?? ''); // Corrigido o erro de sintaxe aqui
+    $email = trim($_POST['email'] ?? ''); 
     $senha_pura = $_POST['senha'] ?? '';
 
-    // Validação: Agora verificando se o email também está vazio
     if (empty($usuario) || empty($senha_pura) || empty($email)) {
         $erro = "Preencha todos os campos, incluindo o e-mail.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

@@ -448,11 +448,15 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             display: block;
             margin-bottom: 15px;
         }
+
+
+
     </style>
 </head>
 <body>
 
 <?php include 'header.php';?>
+
 
 <main class="main-content">
     <div class="hero-section floating">

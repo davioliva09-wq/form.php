@@ -1,6 +1,45 @@
 <?php
+session_start();
 ?>
 <script>
+
+function efeito() {
+    const body = document.querySelector('body');
+    const letras = document.querySelector('h1');
+
+    if (body.style.backgroundColor === '' || body.style.backgroundColor === 'rgb(255, 255, 255)') {
+        body.style.backgroundColor = '#000';
+        letras.style.color = 'rgb(187, 187, 249)';
+    } else {
+        body.style.backgroundColor = '#fff';
+        letras.style.color = 'black';
+    }
+    alert('cor mudada');
+}
+
+
+
+function most(){
+
+const mud = document.querySelector('.senha')
+
+const botao = document.querySelector('.botao')
+if(mud.getAttribute ('type') === 'password'){
+    mud.setAttribute ('type', 'text');
+botao.innerText = 'esconder'}
+else {
+        mud.type = 'password'
+        botao.innerText = 'mostrar'
+        
+    }
+
+}
+
+
+
+//utilizar o innerTetxt para a tag <button>
+
+
 
 let usuarioLogado = <?php echo isset($_SESSION['usuario_logado']) ? 'true' : 'false'; ?>;
 
@@ -32,6 +71,9 @@ function veri(instrumento) {
     }
 }
 
+
+
+
     
 
 /*function dadosCurso($curso){
@@ -61,4 +103,21 @@ switch($curso){
 return [$nomeCurso, $valor];
 }*/
 
+
+
+
+function javalielson(){
+    const bot = document.querySelector('.botao')
+    const k = document.querySelector('.senha')
+
+    if(k.type === 'password'){
+        k.type = 'text';
+        bot.innerText = 'esconder'
+
+    } 
+    else{
+        k.type = 'password';
+        bot.innerText = 'mostrar';
+    }
+}
 </script>

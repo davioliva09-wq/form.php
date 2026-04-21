@@ -14,16 +14,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            font-size: 17px;
-            color: #fff;
-            background-color: #000;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+   
+
+body {
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
         .topo {
             position: fixed;
@@ -192,15 +194,27 @@
                 padding-top: 90px;
             }
         }
+        .cli{background-color: rgb(187, 187, 249);
+            color: #000;
+            border: 2px solid #000;
+            padding: 15px 40px;
+            font-size: 24px;
+            font-family: 'Fascinate', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;}
+
+
+
     </style>
 </head>
 
-<body>
+<body class="dark-theme">
 <?php include 'header.php'?>
 
 
     
-
 
 <div class="content">
     <h1>Saxofone &#9835;</h1>
@@ -257,6 +271,18 @@ Atualmente, o saxofone é amplamente utilizado em diversos estilos musicais, com
         </ul>
     </div>
 
+<script>
+const switcher = document.querySelector('.troca');
+
+switcher.addEventListener('click', function () {
+    document.body.classList.toggle('light-theme');
+    document.body.classList.toggle('dark-theme');
+});
+</script>
+
+</body>
+</html>
+
     <div class="video-section">
         <p>Conheça o som do saxofone</p>
         <iframe width="560" height="315" src="https://youtu.be/tL6oQ3pD8rI?si=m5VdLYs-ywJJqEkn"
@@ -267,10 +293,10 @@ allowfullscreen></iframe>
 </div>
 
 <button class="btn-custom" onclick="matricula()">Inscrição</button>
-
+<button class="cli" onclick="efeito()">aperta</button>
 <?php include 'footer.php';
  include 'functions.php';?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+include 'functions.php';
 require_once 'conexao.php'; // Importante para ter a variável $conn
 session_start();
 
@@ -118,7 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
 
         <input type="text" name="usuario_logado" placeholder="Usuário" required>
-        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="password" name="senha" placeholder="Senha" required class="senha">
+        <button class="botao" onclick="javalielson()">mostrar</button>
 
         <button type="submit">Entrar</button>
     </div>
