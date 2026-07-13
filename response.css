@@ -1,0 +1,70 @@
+/* ========================= */
+/* 📱 TABLET */
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+}
+
+/* ========================= */
+/* 📱 CELULAR */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* MENU */
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* LAYOUT */
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    /* BOTÕES */
+    button {
+        width: 100%;
+    }
+
+    /* INPUTS */
+    input, select, textarea {
+        width: 100%;
+    }
+
+}
+
+/* ========================= */
+/* 📱 CELULAR PEQUENO */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+}

@@ -1,9 +1,15 @@
 <?php
-$host = 'localhost';
-$usuario_db = 'root';
-$senha_db = '';      
-$nome_banco = 'musics'; 
 
+
+
+
+
+
+
+$host = 'sql107.infinityfree.com';
+$usuario_db = 'if0_41763495';
+$senha_db = 'Olivagit1234';              
+$nome_banco = 'if0_41763495_musics';     
 $conn = new mysqli($host, $usuario_db, $senha_db, $nome_banco);
 
 if ($conn->connect_error) {

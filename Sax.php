@@ -177,7 +177,7 @@ body {
 
         .btn-custom:hover {
             background-color: #fff;
-            color: rgb(187, 187, 249);
+            color: rgb(37, 37, 43);
         }
 
         @media (max-width: 768px) {
@@ -293,7 +293,7 @@ allowfullscreen></iframe>
 </div>
 
 <button class="btn-custom" onclick="matricula()">Inscrição</button>
-<button class="cli" onclick="efeito()">aperta</button>
+<!--<button class="cli" onclick="efeito()"></button>-->
 <?php include 'footer.php';
  include 'functions.php';?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,48 +1,49 @@
 <?php
-session_start();
+// functions.php - APENAS FUNÇÕES PHP
+
+function exibirErro($erro) {
+    if($erro) {
+        return true;
+    }
+    return false;
+}
 ?>
+
 <script>
-
-function efeito() {
-    const body = document.querySelector('body');
-    const letras = document.querySelector('h1');
-
-    if (body.style.backgroundColor === '' || body.style.backgroundColor === 'rgb(255, 255, 255)') {
-        body.style.backgroundColor = '#000';
-        letras.style.color = 'rgb(187, 187, 249)';
-    } else {
-        body.style.backgroundColor = '#fff';
-        letras.style.color = 'black';
-    }
-    alert('cor mudada');
-}
-
-
-
-function most(){
-
-const mud = document.querySelector('.senha')
-
-const botao = document.querySelector('.botao')
-if(mud.getAttribute ('type') === 'password'){
-    mud.setAttribute ('type', 'text');
-botao.innerText = 'esconder'}
-else {
-        mud.type = 'password'
-        botao.innerText = 'mostrar'
-        
-    }
-
-}
-
-
-
-//utilizar o innerTetxt para a tag <button>
-
-
-
+// Controle de login (PHP → JS)
 let usuarioLogado = <?php echo isset($_SESSION['usuario_logado']) ? 'true' : 'false'; ?>;
 
+// Alternar cor
+function efeito() {
+    const body = document.body;
+    const letras = document.querySelector('h1');
+
+    if (body.style.backgroundColor === '' || body.style.backgroundColor === 'white') {
+        body.style.backgroundColor = '#000';
+        if (letras) letras.style.color = '#bbbbf9';
+    } else {
+        body.style.backgroundColor = '#fff';
+        if (letras) letras.style.color = 'black';
+    }
+}
+
+// Mostrar / esconder senha
+function toggleSenha() {
+    const input = document.getElementById('senha');
+    const botao = document.getElementById('btnToggle');
+
+    if (!input || !botao) return;
+
+    if (input.type === 'password') {
+        input.type = 'text';
+        botao.innerText = 'Esconder';
+    } else {
+        input.type = 'password';
+        botao.innerText = 'Mostrar';
+    }
+}
+
+// Redirecionamentos
 function matricula(){
     window.location.href = "cadastro.php";
 }
@@ -51,73 +52,33 @@ function voltar(){
     window.location.href = "index.php";
 }
 
+// Verificação de acesso
 function veri(instrumento) {
     if (!usuarioLogado) {
         window.location.href = 'login.php'; 
-    } else {
-        switch(instrumento) {
-            case 'Clarinete': 
-                window.location.href = 'ClarineteAula.php'; 
-                break;
-            case 'Sax': // Added missing value
-                window.location.href = 'SaxAula.php'; 
-                break;
-            case 'Violino': 
-                window.location.href = 'ClarineteAula.php'; 
-                break;
-            default:
-                console.log('Instrumento não reconhecido');
-        }
+        return;
+    }
+
+    switch(instrumento) {
+        case 'Clarinete': 
+            window.location.href = 'ClarineteAula.php'; 
+            break;
+        case 'Sax':
+            window.location.href = 'SaxAula.php'; 
+            break;
+        case 'Violino': 
+            window.location.href = 'violinaula.php';
+            break;
+        default:
+            console.log('Instrumento não reconhecido');
     }
 }
 
-
-
-
-    
-
-/*function dadosCurso($curso){
-
-switch($curso){
-
-    case "Clarinete":
-        $nomeCurso = "Curso de Clarinete";
-        $valor = "R$ 100,00";
-    break;
-
-    case "Sax":
-        $nomeCurso = "Curso de Sax";
-        $valor = "R$ 120,00";
-    break;
-
-    case "Violino":
-        $nomeCurso = "Curso de Violino";
-        $valor = "R$ 150,00";
-    break;
-
-    default:
-        $nomeCurso = "Curso desconhecido";
-        $valor = "R$ 0,00";
-}
-
-return [$nomeCurso, $valor];
-}*/
-
-
-
-
-function javalielson(){
-    const bot = document.querySelector('.botao')
-    const k = document.querySelector('.senha')
-
-    if(k.type === 'password'){
-        k.type = 'text';
-        bot.innerText = 'esconder'
-
-    } 
-    else{
-        k.type = 'password';
-        bot.innerText = 'mostrar';
+// Evento botão senha
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('btnToggle');
+    if (btn) {
+        btn.addEventListener('click', toggleSenha);
     }
-}
+});
 </script>

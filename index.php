@@ -169,7 +169,6 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
-            gap:20px;
         }
 
         .area-music:hover img {
@@ -289,31 +288,25 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
                 gap: 15px;
                 text-align: center;
             }
-            
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
             .hero-section h2 {
                 font-size: 2.5em;
             }
-            
             .feature-card {
                 width: 100%;
                 max-width: 300px;
             }
-            
             .footer-content {
                 flex-direction: column;
                 text-align: center;
             }
-            
             .text {
                 justify-content: center;
                 padding-right: 20px;
             }
-            
             select {
                 width: 100%;
                 max-width: 300px;
@@ -335,7 +328,6 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             width: 100%;
         }
 
-
         .btn-custom {
             background-color: rgb(187, 187, 249);
             color: #000;
@@ -353,6 +345,7 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             background-color: #fff;
             color: rgb(187, 187, 249);
         }
+
         .preços {
             display: flex;
             justify-content: center;
@@ -389,7 +382,6 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
                 gap: 30px;
                 padding: 20px;
             }
-            
             .preços img {
                 width: 250px;
                 height: 250px;
@@ -397,14 +389,14 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             }
         }
 
-        .area-botoes{
+        .area-botoes {
             display: flex;
             gap: 20px;
             justify-content: center;
             margin-top: 60px;
         }
 
-        .btn{
+        .btn {
             padding: 12px 30px;
             border-radius: 10px;
             text-decoration: none;
@@ -414,28 +406,29 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             display: inline-block;
         }
 
-        .entrar{
+        .entrar {
             background-color: rgb(187, 187, 249);
             color: #000;
         }
 
-        .matricula{
+        .matricula {
             background-color: rgb(187, 187, 249);
             color: #000;
         }
 
-        .btn:hover{
+        .btn:hover {
             transform: scale(1.05);
             opacity: 0.9;
         }
 
-        .sair{
+        .sair {
             margin-top:10px;
             border-radius:6px;
             width: 59px;
             background:rgb(187, 187, 249);
         }
-        .sair:hover{
+
+        .sair:hover {
             cursor: pointer;
             transform: scale(1.05); 
             transition: transform 0.2s ease; 
@@ -448,15 +441,11 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
             display: block;
             margin-bottom: 15px;
         }
-
-
-
     </style>
 </head>
 <body>
 
-<?php include 'header.php';?>
-
+<?php include 'header.php'; ?>
 
 <main class="main-content">
     <div class="hero-section floating">
@@ -532,21 +521,17 @@ $cursos = $resultado->fetch_all(MYSQLI_ASSOC);
     
     <?php if(count($cursos) >= 4): ?>
     <figure style="color:#fff;">
-        <img src="imgmus/flautatr.jpg" alt="Flauta" onclick="veri('Flauta')" class="instrumentimg">
-        <figcaption style="margin-top:44px;"><?php echo htmlspecialchars($cursos[3]['nome_curso']); ?></figcaption>
-        <figcaption><strong>R$ <?php echo number_format($cursos[3]['preco'], 2, ',', '.'); ?></strong></figcaption>
+      <!--  <img src="imgmus/flautatr.jpg" alt="Flauta" onclick="veri('Flauta')" class="instrumentimg">-->
+       <!-- <figcaption style="margin-top:44px;"><?php echo htmlspecialchars($cursos[3]['nome_curso']); ?></figcaption>-->
+       <!-- <figcaption><strong>R$ <?php echo number_format($cursos[3]['preco'], 2, ',', '.'); ?></strong></figcaption>-->
     </figure>
     <?php endif; ?>
 </section>
 
 <section style="min-height: 600px; width: 100%;"></section>
 
-
-
 <button class="btn-custom" onclick="window.location.href='professor.php'">acesso para professores</button>
 
-
 <?php include 'footer.php'; ?>
-<script src="functions.php"></script>
 </body>
 </html>
